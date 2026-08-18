@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #FFFFFF; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1f1e1a"></rect><text x="50" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#f7f4ec">ET</text></svg></template>
+
+<div style="background:#FFFFFF;color:#484851;font:400 17px/1.6 'IBM Plex Sans',sans-serif">
+
+  <div style="position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding:18px clamp(24px,8vw,160px);background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid #e4dfd2;font:500 13px/1 'IBM Plex Mono',monospace;letter-spacing:.06em">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;border:2px solid #1f1e1a"></span>Emma Thelineau</a>
+    <div style="display:flex;flex-wrap:wrap;gap:18px 26px;color:#544f45">
+      <a href="Home.dc.html#projets">Projets</a>
+      <a href="A propos.dc.html">À propos</a>
+      <a href="Contact.dc.html">Contact</a>
+    </div>
+  </div>
+
+  <div style="padding:14px clamp(24px,8vw,160px) 0">
+    <a href="Home.dc.html#projets" style="font:500 12px/1 'IBM Plex Mono',monospace;color:#544f45">← Retour aux projets</a>
+  </div>
+
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);padding:clamp(28px,5vw,56px) clamp(24px,8vw,160px) 8px;display:flex;flex-direction:column;gap:18px">
+    <span style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:oklch(0.5 0.09 240)">Refonte web · 2025 · Stage à distance</span>
+    <h1 style="margin:0;font:400 clamp(34px,5vw,58px)/1.1 'Instrument Serif',serif;max-width:22ch;text-wrap:pretty">Henrri.com — refonte de la page d'accueil</h1>
+    <p style="margin:0;max-width:64ch;color:#544f45">Une semaine, en distanciel, pour rendre la proposition de valeur d'un logiciel de facturation lisible en dix secondes.</p>
+  </div>
+
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .1s,transform .8s cubic-bezier(.2,.7,.2,1) .1s;margin:24px clamp(24px,8vw,160px) 0;aspect-ratio:16/8;background:#efeade;overflow:hidden">
+    <img src="assets/henrri-apres.jpg" alt="Page d'accueil de Henrri.com après refonte" style="width:100%;height:100%;object-fit:cover;display:block">
+  </div>
+
+  <div style="padding:clamp(28px,5vw,52px) clamp(24px,8vw,160px) 20px;display:flex;flex-direction:column;gap:30px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:36px">
+      <div style="display:flex;flex-direction:column;gap:10px"><span style="font:500 12px/1 'IBM Plex Mono',monospace;text-transform:uppercase;color:#8a8375">Contexte</span><p style="margin:0;font-size:15px;line-height:1.6;color:#413d35">Exercice interne confié par ma maître de stage : reprendre la page d'accueil d'un logiciel de facturation. Aucun client final, une contrainte de délai forte et un objectif unique — rendre la proposition de valeur compréhensible en dix secondes.</p></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><span style="font:500 12px/1 'IBM Plex Mono',monospace;text-transform:uppercase;color:#8a8375">Démarche</span><p style="margin:0;font-size:15px;line-height:1.6;color:#413d35">Audit de la page existante, restructuration de la hiérarchie de l'information, réduction de quatre appels à l'action concurrents à un seul, regroupement des sections selon les questions du visiteur, puis maquettes desktop et mobile.</p></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><span style="font:500 12px/1 'IBM Plex Mono',monospace;text-transform:uppercase;color:#8a8375">Enseignements</span><p style="margin:0;font-size:15px;line-height:1.6;color:#413d35">Le format court impose de hiérarchiser rapidement et d'argumenter ses choix. J'ai appris à défendre trois décisions de conception face à une interlocutrice connaissant mieux le produit, et à intégrer un arbitrage défavorable.</p></div>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);display:grid;grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr);gap:14px;align-items:center;margin-top:16px">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:10px"><span style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8a8375">Avant</span><img src="assets/henrri-avant-2.jpg" alt="Page d'accueil de Henrri.com avant la refonte" style="width:100%;display:block"></div>
+      <span style="display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:#1f1e1a;color:#f7f4ec;font:700 22px/1 'IBM Plex Sans',sans-serif;justify-self:center">→</span>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:10px"><span style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:oklch(0.46 0.09 240)">Après</span><img src="assets/henrri-apres.jpg" alt="Page d'accueil de Henrri.com après la refonte" style="width:100%;display:block"></div>
+    </div>
+  </div>
+
+  <div style="padding:32px clamp(24px,8vw,160px);display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font:500 13px/1 'IBM Plex Mono',monospace">
+    <a href="Projet Eparneo.dc.html">← Projet précédent : Eparneo</a>
+    <a href="Projet Exercices.dc.html">Projet suivant : Exercices Figma →</a>
+  </div>
+
+  <div style="padding:40px clamp(24px,8vw,160px) 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px;font:500 13px/1 'IBM Plex Mono',monospace">
+    <span style="width:18px;height:18px;border-radius:50%;border:2px solid #1f1e1a"></span>
+    <div style="display:flex;gap:56px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:10px;color:#544f45"><span style="color:#1f1e1a">Navigation</span><a href="Home.dc.html">Accueil</a><a href="Home.dc.html#projets">Projets</a><a href="Contact.dc.html">Contact</a></div>
+      <div style="display:flex;flex-direction:column;gap:10px;color:#544f45"><span style="color:#1f1e1a">Liens</span><a href="https://www.linkedin.com/in/emma-thelineau-148a9a197/" target="_blank" rel="noopener">LinkedIn</a><a href="assets/CV Product designer.pdf" target="_blank" rel="noopener">CV (PDF)</a></div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach((el) => io.observe(el));
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;family=Instrument+Serif:ital@0;1&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Prompt:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #FFFFFF; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1f1e1a"></rect><text x="50" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#f7f4ec">ET</text></svg></template>
+
+<div style="background:#FFFFFF;color:#1f1e1a;font:400 17px/1.6 'IBM Plex Sans',sans-serif">
+
+  <div style="position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding:18px clamp(24px,8vw,160px);background:rgba(255,255,255,.92);backdrop-filter:blur(6px);font:500 13px/1 'IBM Plex Mono',monospace;letter-spacing:.06em">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px"><span style="width:18px;height:18px;border-radius:50%;border:2px solid #1f1e1a"></span>Emma Thelineau</a>
+    <div style="display:flex;flex-wrap:wrap;gap:18px 26px;color:#544f45">
+      <a href="Home.dc.html#projets">Projets</a>
+      <a href="A propos.dc.html">À propos</a>
+      <a href="Contact.dc.html">Contact</a>
+    </div>
+  </div>
+
+  <div style="position:sticky;top:53px;z-index:19;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px clamp(24px,8vw,160px);background:rgba(247,244,236,.92);backdrop-filter:blur(6px);overflow-x:auto;background:rgba(255,255,255,.92)">
+    <a href="Home.dc.html#projets" style="font:500 12px/1 'IBM Plex Mono',monospace;color:#544f45;white-space:nowrap">← Retour aux projets</a>
+  </div>
+
+  <div data-reveal="" style="opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);padding:clamp(40px,6vw,72px) clamp(24px,8vw,160px) 8px;display:grid;grid-template-columns:1.3fr auto;gap:32px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h1 style="margin:0;font:700 44px/1.1 'Prompt',sans-serif;color:#07440D">EPARNEO</h1>
+      <h2 style="margin:0;font:600 30px/1.2 'Prompt',sans-serif;color:#07440D">Project overview</h2>
+      <p style="margin:0;max-width:82ch;color:#413d35;text-wrap:pretty">Eparneo est un produit fictif conçu dans le cadre de la certification Google UX Design. La formation permet d'apprendre à suivre les 5 principes du design afin de produire des mockups d'applications et sites web réactifs. Chaque livrable est produit par mes soins.</p>
+      <p style="margin:0;max-width:82ch;color:#413d35;text-wrap:pretty">Le projet ne repose ni sur des utilisateurs réels ni sur des indicateurs d'usage : aucun chiffre de performance n'est présenté, faute de données existantes. L'objet de cette étude de cas est de dérouler les différentes étapes du design : cadrage du problème, recherche, prototypage, test, itération.</p>
+    </div>
+    <img src="assets/eparneo-welcome.png" alt="Écran de bienvenue Eparneo" style="width:180px;flex:0 0 auto;display:block">
+  </div>
+
+  <div data-reveal="" style="opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);padding:clamp(20px,4vw,36px) clamp(24px,8vw,160px) 20px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;background:#f7f4ec;border-radius:20px;padding:28px 32px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font:600 13px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#07440D">Le problème</h3>
+        <p style="margin:0;color:#413d35;font-size:15px;text-wrap:pretty">Les personnes qui veulent financer un projet à plusieurs (voyage, cadeau, pot de départ) n'ont aucun outil pour le faire. L'argent reste sur le compte courant et finit dépensé, les versements se suivent dans un tableur et un groupe de messagerie, et diviser le total par le nombre de participants met en difficulté ceux qui ne peuvent pas suivre.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font:600 13px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#07440D">Le but</h3>
+        <p style="margin:0;color:#413d35;font-size:15px;text-wrap:pretty">Offrir une cagnotte commune où l'argent est réellement mis à l'abri du compte courant, où chacun verse librement la part qu'il veut, et où l'utilisateur voit ses dépenses réelles avant de décider du montant qu'il peut se permettre d'épargner.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font:600 13px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#07440D">Mon rôle</h3>
+        <p style="margin:0;color:#413d35;font-size:15px;text-wrap:pretty">Recherche, personas, wireframes, prototypage, tests d'utilisabilité, mockups.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font:600 13px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#07440D">Outils</h3>
+        <p style="margin:0;color:#413d35;font-size:15px;text-wrap:pretty">Plateforme Coursera, Figma.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="research" data-reveal="" style="opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);padding:clamp(30px,5vw,56px) clamp(24px,8vw,160px) 10px;display:flex;flex-direction:column;gap:16px">
+    <h2 style="margin:0;font:600 30px/1.2 'Prompt',sans-serif;color:#07440D">User research</h2>
+    <p style="margin:0;max-width:none;color:#413d35;text-wrap:pretty">Eparneo est un projet fictif réalisé dans le cadre de la certification Google UX Design. N'ayant pas eu accès à un panel d'utilisateurs réels pour la phase de recherche, j'ai construit un persona documenté à partir d'un besoin observé autour de moi — épargner à plusieurs pour un objectif commun — puis j'ai formulé des hypothèses explicites sur les objectifs, freins et son contexte d'usage.</p>
+    <p style="margin:0;max-width:none;color:#413d35;text-wrap:pretty">Ces hypothèses ont ensuite été testées face à mon entourage : j'ai mené trois études d'utilisabilité modérées, en observant chaque participant réaliser les tâches clés du parcours : créer un objectif, effectuer un versement pour la cagnotte, naviguer sur l'application, créer un second objectif. Grâce à ces sessions de test, j'ai pu créer puis itérer mes décisions de conception.</p>
+    <p style="margin:0;max-width:none;color:#413d35;text-wrap:pretty">J'ai fait le choix d'une démarche qualitative : sur un échantillon restreint, comprendre pourquoi un utilisateur hésite a plus de valeur que mesurer combien hésitent. Chaque friction relevée a été traduite en une modification traçable lors de la phase de wireframing, ce qui m'a permis d'itérer sur des faits d'observation plutôt que sur des préférences esthétiques.</p>
+  </div>
+
+  <div id="wireframes" data-reveal="" style="opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);padding:clamp(24px,4vw,44px) clamp(24px,8vw,160px) 10px;display:flex;flex-direction:column;gap:16px">
+    <h2 style="margin:0;font:600 30px/1.2 'Prompt',sans-serif;color:#07440D">Wireframes papier</h2>
+    <p style="margin:0;max-width:none;color:#413d35;text-wrap:pretty">J'ai pris le temps de dessiner 3 interfaces différentes pour la page d'accueil. J'ai validé la dernière pour la reproduire sur Figma. La 2ème photo représente les pages qu'il est possible de retrouver dans les différents onglets de l'application ; la dernière photo montre les 2 pages supplémentaires lorsqu'une personne demande à ajouter un montant ou ajouter un participant.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <img src="assets/eparneo-paper-1.jpeg" alt="Wireframes papier — page opération, épargne commune, participants" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border:1px solid #e4dfd2;display:block">
+      <img src="assets/eparneo-paper-2.jpeg" alt="Wireframes papier — ajout de l'épargne et d'un participant" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border:1px solid #e4dfd2;display:block">
+      <img src="assets/eparneo-paper-3.jpeg" alt="Wireframes papier — 3 pistes pour l'accueil" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border:1px solid #e4dfd2;display:block">
+    </div>
+  </div>
+
+  <div id="lofi" data-reveal="" style="opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);padding:clamp(24px,4vw,44px) clamp(24px,8vw,160px) 10px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px">
+    <h2 style="margin:0;font:600 30px/1.2 'Prompt',sans-serif;color:#07440D">Lo-fi prototype</h2>
+    
+    <p style="margin:0;max-width:70ch;color:#413d35;text-wrap:pretty">J'ai créé mon prototype basse fidélité au stylo et papier pour permettre des itérations rapides. Suite à ces wireframes papiers, je les ai maquettés sur Figma et je l'ai fait tester une première fois.</p><img src="assets/eparneo-lofi-flow.png" alt="Schéma du prototype lo-fi connecté" style="width:100%;max-width:360px;border:1px solid #e4dfd2;background:#fffdf8;display:block;image-rendering:auto">
+    <a href="https://www.figma.com/proto/Luprv0L1Z3FydeQOtS5yJy/Projet-coursera---Epaneo?node-id=1-196&amp;viewport=354%2C-16%2C0.19&amp;t=QkczyCWMjUNfgult-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=1%3A2" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:10px;background:#07440D;color:#f7f4ec;font:500 13px/1 'IBM Plex Mono',monospace" style-hover="background:#0a5a12">Voir le prototype lo-fi <span style="font-size:15px">↗</span></a>
+
+    <div style="width:100%;max-width:820px;text-align:left;margin-top:24px">
+      <h3 style="margin:0 0 16px;font:600 22px/1.2 'Prompt',sans-serif;color:#07440D">Résultats des études d'utilisabilité</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#fffdf8;border:1px solid #e4dfd2;border-radius:12px;overflow:hidden">
+        <div style="background:#07440D;color:#fff;padding:16px 20px;font:600 15px/1.3 'IBM Plex Sans',sans-serif">Tour 1 recherche</div>
+        <div style="background:#07440D;color:#fff;padding:16px 20px;font:600 15px/1.3 'IBM Plex Sans',sans-serif">Tour 2 recherche</div>
+        <div style="background:#fffdf8;padding:18px 20px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#07440D;color:#fff;font:600 12px/1 'IBM Plex Sans',sans-serif">1</span><p style="margin:0;font-size:14px;color:#413d35">Nouvelle interface pour montrer les différents participants des différents objectifs</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#07440D;color:#fff;font:600 12px/1 'IBM Plex Sans',sans-serif">2</span><p style="margin:0;font-size:14px;color:#413d35">Changement du wording pour l'objectif à modifier</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#07440D;color:#fff;font:600 12px/1 'IBM Plex Sans',sans-serif">3</span><p style="margin:0;font-size:14px;color:#413d35">Avoir la même barre de navigation sur toutes les pages</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#07440D;color:#fff;font:600 12px/1 'IBM Plex Sans',sans-serif">4</span><p style="margin:0;font-size:14px;color:#413d35">Afficher tous les comptes bancaires (pour les opérations)</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#07440D;color:#fff;font:600 12px/1 'IBM Plex Sans',sans-serif">5</span><p style="margin:0;font-size:14px;color:#413d35">Créer une page de confirmation de l'ajout du budget</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#07440D;color:#fff;font:600 12px/1 'IBM Plex Sans',sans-serif">6</span><p style="margin:0;font-size:14px;color:#413d35">Changer le wording « restant dû »</p></div>
+        </div>
+        <div style="background:#fffdf8;padding:18px 20px;display:flex;flex-direction:column;gap:12px;align-self:center">
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#07440D;color:#fff;font:600 12px/1 'IBM Plex Sans',sans-serif">1</span><p style="margin:0;font-size:14px;color:#413d35">Afficher un dessous de cadre afin de comprendre qu'il faut scroller</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#07440D;color:#fff;font:600 12px/1 'IBM Plex Sans',sans-serif">2</span><p style="margin:0;font-size:14px;color:#413d35">Modifier tous les pictogrammes du menu</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#07440D;color:#fff;font:600 12px/1 'IBM Plex Sans',sans-serif">3</span><p style="margin:0;font-size:14px;color:#413d35">Modifier l'affichage du graphique en anneau</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#07440D;color:#fff;font:600 12px/1 'IBM Plex Sans',sans-serif">4</span><p style="margin:0;font-size:14px;color:#413d35">Ajouter un écran avec une croix de suppression pour les participants</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="hifi" data-reveal="" style="opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);padding:clamp(24px,4vw,44px) clamp(24px,8vw,160px) 10px;display:flex;flex-direction:column;gap:16px">
+    <h2 style="margin:0;font:600 30px/1.2 'Prompt',sans-serif;color:#07440D">Hi-fi prototypes</h2>
+    <p style="margin:0;max-width:none;color:#413d35;text-wrap:pretty">Après avoir mené mes tests d'utilisabilité sur le prototype lo-fi, j'ai réalisé une seconde étude d'utilisabilité afin de valider mes itérations. Ce second tour de tests m'a permis d'affiner les parcours et de les faire aboutir au prototype final hi-fi présenté ci-dessous.</p>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span style="font:600 14px/1.3 'IBM Plex Sans',sans-serif">Parcours 1 – session d'onboarding :</span>
+      <img src="assets/eparneo-usability-round2.png" alt="Écrans du second tour de tests d'utilisabilité" style="width:100%;max-width:900px;border:1px solid #e4dfd2;background:#fffdf8;display:block">
+      <a href="https://www.figma.com/proto/Luprv0L1Z3FydeQOtS5yJy/Projet-coursera---Epaneo?node-id=16-2&amp;viewport=322%2C331%2C0.14&amp;t=ArQHTV9bom7PCVLs-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=1%3A3" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:10px;background:#07440D;color:#f7f4ec;font:500 13px/1 'IBM Plex Mono',monospace" style-hover="background:#0a5a12">Ouvrir le parcours 1 <span style="font-size:15px">↗</span></a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;margin-top:36px">
+      <span style="font:600 14px/1.3 'IBM Plex Sans',sans-serif">Parcours 2 – ajout d'un montant + création nouvel objectif :</span>
+      <img src="assets/eparneo-usability-round2-flow2.png" alt="Écrans du second tour de tests d'utilisabilité — parcours 2" style="width:100%;max-width:900px;border:1px solid #e4dfd2;background:#fffdf8;display:block">
+      <a href="https://www.figma.com/proto/Luprv0L1Z3FydeQOtS5yJy/Projet-coursera---Epaneo?node-id=84-356&amp;viewport=-80%2C592%2C0.09&amp;t=9m1md0yczOyJ9yyr-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=49%3A259" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:10px;background:#07440D;color:#f7f4ec;font:500 13px/1 'IBM Plex Mono',monospace" style-hover="background:#0a5a12">Ouvrir le parcours 2 <span style="font-size:15px">↗</span></a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;margin-top:36px">
+      <span style="font:600 14px/1.3 'IBM Plex Sans',sans-serif">Aperçu des maquettes finales :</span>
+      <p style="margin:0;color:#413d35;font-size:14px;text-wrap:pretty">Quelques écrans du prototype hi-fi final, tel que testé lors du second tour d'utilisabilité.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:10px">
+      <img src="assets/eparneo-depenses.png" alt="Maquette — mes dépenses" style="width:100%;display:block">
+      <img src="assets/eparneo-montant.png" alt="Maquette — ajout d'un montant" style="width:100%;display:block">
+      <img src="assets/eparneo-participants.png" alt="Maquette — les participants" style="width:100%;display:block">
+      <img src="assets/eparneo-recap-objectif.png" alt="Maquette — récapitulatif de l'objectif" style="width:100%;display:block">
+    </div>
+  </div>
+
+  <div id="accessibilite" data-reveal="" style="opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);padding:clamp(48px,7vw,80px) clamp(24px,8vw,160px) clamp(40px,6vw,64px);display:flex;flex-direction:column;gap:20px">
+    <h2 style="margin:0;font:600 30px/1.2 'Prompt',sans-serif;color:#07440D">Conditions d'accessibilité</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px">
+      <div style="display:flex;flex-direction:column;gap:12px"><span style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#07440D;color:#fff;font:600 15px/1 'IBM Plex Sans',sans-serif">1</span><p style="margin:0;font-size:14px;color:#413d35;text-wrap:pretty">Toutes les animations sont à 800ms pour rester perceptibles sans ralentir l'usage, conformément aux recommandations WCAG sur le mouvement.</p></div>
+      <div style="display:flex;flex-direction:column;gap:12px"><span style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#07440D;color:#fff;font:600 15px/1 'IBM Plex Sans',sans-serif">2</span><p style="margin:0;font-size:14px;color:#413d35;text-wrap:pretty">Contrastes vérifiés avec le plugin Stark (Contrast &amp; Accessibility Checker). Tous les couples texte/fond atteignent le niveau AAA (11.4:1 et 9.8:1).</p></div>
+      <div style="display:flex;flex-direction:column;gap:12px"><span style="display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#07440D;color:#fff;font:600 15px/1 'IBM Plex Sans',sans-serif">3</span><p style="margin:0;font-size:14px;color:#413d35;text-wrap:pretty">Hiérarchie typographique claire (titres en 30px, texte courant en 16px, texte descriptif en 14px). Boutons dimensionnés pour la préhension tactile, et barre de menu annotée pour guider la navigation.</p></div>
+    </div>
+  </div>
+
+  <div style="padding:32px clamp(24px,8vw,160px);display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font:500 13px/1 'IBM Plex Mono',monospace">
+    <a href="Home.dc.html#projets">← Retour aux projets</a>
+    <a href="Projet Henrri.dc.html">Projet suivant : Henrri.com →</a>
+  </div>
+
+  <div style="padding:40px clamp(24px,8vw,160px) 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px;font:500 13px/1 'IBM Plex Mono',monospace">
+    <span style="width:18px;height:18px;border-radius:50%;border:2px solid #1f1e1a"></span>
+    <div style="display:flex;gap:56px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:10px;color:#544f45"><span style="color:#1f1e1a">Navigation</span><a href="Home.dc.html">Accueil</a><a href="Home.dc.html#projets">Projets</a><a href="Contact.dc.html">Contact</a></div>
+      <div style="display:flex;flex-direction:column;gap:10px;color:#544f45"><span style="color:#1f1e1a">Liens</span><a href="https://www.linkedin.com/in/emma-thelineau-148a9a197/" target="_blank" rel="noopener">LinkedIn</a><a href="assets/CV Product designer.pdf" target="_blank" rel="noopener">CV (PDF)</a></div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach((el) => io.observe(el));
+  }
+}
+</script>
+</body>
+</html>

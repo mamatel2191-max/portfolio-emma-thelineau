@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Prompt:wght@400;600;700&amp;family=Commissioner:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #FFFFFF; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  summary { list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::marker { content: ""; }
+  @media (min-width: 1101px) {
+    .mq-pairs { grid-template-columns: minmax(0,760px) !important; justify-content: center; gap: 56px !important; }
+  }
+  @media (min-width: 761px) and (max-width: 1100px) {
+    .mq-grid2 { gap: 28px !important; }
+    .mq-pairs { grid-template-columns: repeat(3,minmax(0,1fr)) !important; gap: 20px !important; }
+  }
+  @media (max-width: 760px) {
+    html, body { overflow-x: clip; }
+    .mq-grid2 { grid-template-columns: 1fr !important; gap: 24px !important; }
+    .mq-hide { display: none !important; }
+    #dc-root p { text-align: justify !important; hyphens: none !important; -webkit-hyphens: none !important; }
+    a[style*="white-space:nowrap"][style*="999px"] { white-space: normal !important; text-align: center; }
+    article { padding: 20px !important; }
+    h3[style*="34px"] { font-size: 28px !important; }
+    .mq-pairs { grid-template-columns: 1fr !important; gap: 28px !important; }
+    .mq-prompt { flex: 1 1 100% !important; flex-direction: row !important; align-items: center !important; gap: 16px !important; }
+    .mq-prompt img { width: 120px !important; flex: 0 0 120px; }
+    .mq-prompt a { width: auto !important; flex: 1 1 auto; white-space: normal !important; text-align: center; }
+    #fonctionnalites .mq-grid2 { gap: 8px !important; }
+    #fonctionnalites [class="mq-grid2"][style*="repeat(2"] { gap: 16px !important; }
+    .mq-steps { grid-template-columns: repeat(2,1fr) !important; }
+    .mq-tilt { height: auto !important; display: flex !important; flex-direction: column !important; gap: 16px !important; perspective: none !important; }
+    .mq-tilt > * { position: static !important; width: 100% !important; transform: none !important; }
+  }
+  .toc-row::-webkit-scrollbar { display: none; }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#B25A3C"></rect><text x="50" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#FFF8F2">A</text></svg></template>
+
+<div style="background:#FFFFFF;color:#1f1e1a;font:400 17px/1.6 'IBM Plex Sans',sans-serif">
+
+  <div data-toc-nav="" style="position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding:18px clamp(24px,8vw,160px);background:rgba(255,255,255,.92);backdrop-filter:blur(6px);font:500 13px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px;font-size:16px"><span style="display:flex;align-items:center;justify-content:center;width:18px;height:18px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1f1e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg></span>Accueil</a>
+    <div style="display:flex;flex-wrap:wrap;gap:18px 26px;color:#544f45;font-size:16px">
+      <details style="position:relative">
+        <summary style="cursor:pointer;color:inherit;list-style:none;white-space:nowrap">Projets ▾</summary>
+        <div style="position:absolute;top:26px;left:0;background:#fff;border:1px solid #e4dfd2;border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:2px;box-shadow:0 12px 24px rgba(31,30,26,.12);z-index:30;min-width:190px;font:500 13px/1.4 'IBM Plex Sans',sans-serif">
+          <details style="display:block">
+            <summary style="cursor:pointer;list-style:none;padding:8px 10px;border-radius:6px;display:flex;align-items:center;justify-content:space-between;gap:16px;white-space:nowrap" style-hover="background:#f7f6f4"><span>Google UX Design</span><span style="font-size:18px;line-height:1;color:#7a7466">▾</span></summary>
+            <div style="display:flex;flex-direction:column;gap:2px;margin:2px 0 4px 10px;padding-left:8px;border-left:1px solid #e4dfd2">
+              <a href="Projet Aidea.dc.html" style="padding:6px 10px;border-radius:6px;display:block;white-space:nowrap" style-hover="background:#f7f6f4">Aidéa</a>
+              <a href="Projet Eparneo.dc.html" style="padding:6px 10px;border-radius:6px;display:block;white-space:nowrap" style-hover="background:#f7f6f4">Eparneo</a>
+            </div>
+          </details>
+          <a href="Projet Henrri.dc.html" style="padding:8px 10px;border-radius:6px;display:block" style-hover="background:#f7f6f4">Henrri.com</a>
+          <a href="Projet Exercices.dc.html" style="padding:8px 10px;border-radius:6px;display:block" style-hover="background:#f7f6f4">Exercices Figma</a>
+        </div>
+      </details>
+      <a href="A propos.dc.html" style="white-space:nowrap">À propos</a>
+      <a href="Contact.dc.html">Contact</a>
+    </div>
+    <div style="flex:0 0 auto;box-sizing:border-box;width:calc(100% + 2 * clamp(24px,8vw,160px));min-width:0;max-width:none;position:relative;margin:-2px calc(-1 * clamp(24px,8vw,160px)) -18px;border-top:1px solid #F3EAE4;border-bottom:1px solid #EADDD5;background:#fff;letter-spacing:0">
+      <div class="toc-row" ref="{{ tocRow }}" style="position:relative;min-width:0;display:flex;gap:6px;padding:10px clamp(24px,8vw,160px);white-space:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;touch-action:pan-x pan-y">
+        <sc-for list="{{ tocItems }}" as="c" hint-placeholder-count="8">
+          <a href="#" onClick="{{ c.go }}" style="{{ c.chip }}">{{ c.n }} · {{ c.s }}</a>
+        </sc-for>
+      </div>
+      <div style="{{ tocProg }}"></div>
+    </div>
+  </div>
+
+
+  <!-- HERO — blanc -->
+  <div data-reveal="" style="box-sizing:border-box;max-width:1600px;margin:0 auto;opacity:0;transform:translateY(12px);filter:blur(4px);transition:opacity .35s cubic-bezier(.2,.7,.2,1),transform .35s cubic-bezier(.2,.7,.2,1),filter .35s cubic-bezier(.2,.7,.2,1);padding:clamp(40px,6vw,72px) clamp(24px,8vw,160px) clamp(48px,6vw,80px);display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center" class="mq-grid2">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <h1 style="margin:0;font:700 44px/1.1 'Prompt',sans-serif;color:#8C3F26">AIDÉA</h1>
+      <p style="margin:0;font:400 italic 26px/1.3 'Instrument Serif',serif;color:#413d35;text-align:justify;hyphens:manual">Trouver une mission de bénévolat qui vous correspond.</p>
+      <p style="text-align:justify;hyphens:manual;margin: 0; max-width: 62ch; color: #413d35; text-wrap: pretty; position: relative">Aidéa est un projet fictif réalisé pour la certification Google UX Design. J’y explore la conception d’une plateforme de bénévolat en combinant analyse de données et démarche UX, jusqu’à la réalisation d’un prototype interactif.</p><p></p>
+    </div>
+    <div style="min-width:0;display:flex;align-items:center;justify-content:center">
+      <img src="assets/aidea-hero-iphone.png" alt="Écran d'accueil de l'application Aidéa sur iPhone" style="height:clamp(320px,30vw,420px);width:auto;max-width:100%;object-fit:contain;display:block;filter:drop-shadow(0 18px 30px rgba(90,50,30,.22))">
+    </div>
+  </div>
+
+  <!-- DÉMARCHE — bande terracotta -->
+  <div style="background:#B25A3C;color:#FFF8F2">
+    <div data-reveal="" style="box-sizing:border-box;max-width:1600px;margin:0 auto;opacity:0;transform:translateY(12px);filter:blur(4px);transition:opacity .35s cubic-bezier(.2,.7,.2,1),transform .35s cubic-bezier(.2,.7,.2,1),filter .35s cubic-bezier(.2,.7,.2,1);padding:clamp(48px,6vw,80px) clamp(24px,8vw,160px);display:flex;flex-direction:column;gap:32px">
+      <h2 style="margin:0;font:600 30px/1.2 'Prompt',sans-serif;color:#FFF8F2">Ma démarche</h2>
+      <div class="mq-grid2" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px">
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#FFE3D6">Mon rôle</span><span>Product designer</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#FFE3D6">Outils</span><span>Google Forms, ChatGPT, Excel, Figma, Claude Design</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#FFE3D6">Livrables</span><span>Questionnaire, fichier Excel, analyse de données, graphiques, insights, personas, user flow, wireframes lo-fi, wireframes hi-fi et prototype</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#FFE3D6">Durée du projet</span><span>1 mois</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPITRE 1 — Collecte (blanc) -->
+  <div id="questionnaire" data-reveal="" style="box-sizing:border-box;max-width:1600px;margin:0 auto;opacity:0;transform:translateY(12px);filter:blur(4px);transition:opacity .35s cubic-bezier(.2,.7,.2,1),transform .35s cubic-bezier(.2,.7,.2,1),filter .35s cubic-bezier(.2,.7,.2,1);padding:clamp(56px,7vw,96px) clamp(24px,8vw,160px);display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font:500 22px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#B25A3C">CHAPITRE 1&nbsp;</span>
+      <h2 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Créer le questionnaire</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:700 22px/1.2 'IBM Plex Mono',monospace;color:#B25A3C">Étape 1</span>
+        <h3 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Définir les objectifs de recherche</h3>
+      </div>
+      <p style="margin:0;max-width:70ch;color:#413d35;text-align:justify;hyphens:manual">Avant d'écrire les questions, il faut identifier les informations utiles pour concevoir mon service de bénévolat. Par exemple :</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:12px">
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="flex:0 0 auto;font:600 13px/1.6 'IBM Plex Mono',monospace;color:#B25A3C">01</span><p style="margin:0;font-size:15px;color:#2b2a26;text-align:justify;hyphens:manual">Qu'est-ce qui motive les personnes à faire du bénévolat ?</p></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="flex:0 0 auto;font:600 13px/1.6 'IBM Plex Mono',monospace;color:#B25A3C">02</span><p style="margin:0;font-size:15px;color:#2b2a26;text-align:justify;hyphens:manual">Quels types de causes les intéressent ?</p></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="flex:0 0 auto;font:600 13px/1.6 'IBM Plex Mono',monospace;color:#B25A3C">03</span><p style="margin:0;font-size:15px;color:#2b2a26;text-align:justify;hyphens:manual">Combien de temps peuvent-elles consacrer ?</p></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="flex:0 0 auto;font:600 13px/1.6 'IBM Plex Mono',monospace;color:#B25A3C">04</span><p style="margin:0;font-size:15px;color:#2b2a26;text-align:justify;hyphens:manual">Préfèrent-elles des missions ponctuelles ou régulières ?</p></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="flex:0 0 auto;font:600 13px/1.6 'IBM Plex Mono',monospace;color:#B25A3C">05</span><p style="margin:0;font-size:15px;color:#2b2a26;text-align:justify;hyphens:manual">Qu'est-ce qui les empêche de passer à l'action ?</p></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="flex:0 0 auto;font:600 13px/1.6 'IBM Plex Mono',monospace;color:#B25A3C">06</span><p style="margin:0;font-size:15px;color:#2b2a26;text-align:justify;hyphens:manual">Quelles informations veulent-elles connaître avant de s'inscrire ?</p></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="flex:0 0 auto;font:600 13px/1.6 'IBM Plex Mono',monospace;color:#B25A3C">07</span><p style="margin:0;font-size:15px;color:#2b2a26;text-align:justify;hyphens:manual">Préfèrent-elles être accompagnées ou s'inscrire seules ?</p></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="flex:0 0 auto;font:600 13px/1.6 'IBM Plex Mono',monospace;color:#B25A3C">08</span><p style="margin:0;font-size:15px;color:#2b2a26;text-align:justify;hyphens:manual">Quels critères sont importants pour choisir une mission ?</p></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="flex:0 0 auto;font:600 13px/1.6 'IBM Plex Mono',monospace;color:#B25A3C">09</span><p style="margin:0;font-size:15px;color:#2b2a26;text-align:justify;hyphens:manual">Quels problèmes pourraient-elles rencontrer sur une plateforme numérique ?</p></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="flex:0 0 auto;font:600 13px/1.6 'IBM Plex Mono',monospace;color:#B25A3C">10</span><p style="margin:0;font-size:15px;color:#2b2a26;text-align:justify;hyphens:manual">Quels besoins spécifiques d'accessibilité ou de réassurance peuvent exister ?</p></div>
+      </div>
+      <p style="margin:0;color:#413d35;font-style:italic;text-align:justify;hyphens:manual">Ces objectifs vont ensuite guider les questions.</p>
+    </div>
+    <div class="mq-grid2" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font:700 22px/1.2 'IBM Plex Mono',monospace;color:#B25A3C">Étape 2</span>
+          <h3 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Création du questionnaire</h3>
+        </div>
+        <p style="margin:0;color:#413d35;text-align:justify;hyphens:manual">Ce questionnaire vise à mieux comprendre les motivations, les habitudes, les contraintes et les attentes des personnes intéressées par le bénévolat, afin d'imaginer une plateforme facilitant la recherche et l'inscription à des missions adaptées.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <span style="padding:8px 14px;border-radius:999px;border:1px solid #E3C3B5;font:500 13px/1 'IBM Plex Sans',sans-serif;color:#8C3F26">14 questions</span>
+          <span style="padding:8px 14px;border-radius:999px;border:1px solid #E3C3B5;font:500 13px/1 'IBM Plex Sans',sans-serif;color:#8C3F26">Durée estimée : 4 à 6 minutes</span>
+        </div>
+        <a href="https://tally.so/r/xXAKMJ" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:#B25A3C;color:#FFF8F2;font:500 14px/1 'IBM Plex Sans',sans-serif;text-decoration:none;white-space:nowrap" style-hover="background:#8C3F26">Voir le questionnaire →</a>
+      </div>
+      <video src="assets/aidea-mockup-questionnaire.mp4" data-loop-video="" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="width:100%;height:auto;display:block;border-radius:14px"></video>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;padding:20px 24px;border-radius:12px;border:1px dashed #D9A892;background:#FFFBF8">
+      <span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C3F26">Note méthodologique</span>
+      <p style="margin:0;font-size:15px;color:#413d35;text-align:justify;hyphens:manual">Étude exploratoire fictive basée sur un dataset simulé par intelligence artificielle. Un questionnaire de 14 questions a été conçu afin d'explorer les motivations, les disponibilités, les freins et les attentes de personnes susceptibles d'utiliser une plateforme de mise en relation avec des missions de bénévolat. Les réponses ont ensuite été simulées à partir de profils hypothétiques variés, puis analysées afin d'identifier des tendances et d'orienter les choix UX. Les résultats ne prétendent pas représenter une population réelle et devront être validés par une recherche utilisateur menée auprès de répondants réels.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:700 22px/1.2 'IBM Plex Mono',monospace;color:#B25A3C">Étape 3</span>
+        <h3 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Nettoyage du jeu de données</h3>
+      </div>
+      <p style="margin:0;max-width:none;color:#413d35;text-align:justify;hyphens:manual">Une fois les réponses générées sur Excel, j'ai vérifié à l'aide des filtres que les modalités étaient bien identiques. J'ai ensuite créé une feuille par question pour retranscrire les réponses qualitatives sous forme de matrice binaire : 1 pour oui, 0 pour non. J'ai pu associer à chaque modalité un chiffre à l'aide d'une formule Excel qui s'apparente au « RECHERCHEV ». J'ai ajouté une colonne total pour vérifier qu'aucune ligne ne dépassait le nombre de réponses attendu (par exemple, pas plus de 3 réponses pour la question 5). Enfin, pour m'assurer d'avoir bien écrit les modalités, j'ai recherché les valeurs à 0 (ce qui ne devrait pas être possible puisque toutes les questions sont obligatoires) grâce à une mise en forme conditionnelle.</p>
+      <div style="display:flex;flex-direction:column;gap:40px;width:100%;max-width:693px;margin:0 auto">
+        <figure style="margin:0;display:flex;flex-direction:column;gap:10px"><img src="assets/aidea-excel-mfc.png" alt="Excel — mise en forme conditionnelle sur la colonne Total" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid #EBD6CC"><figcaption style="font-size:15px;line-height:1.5;color:#544f45;text-wrap:pretty">Mise en forme conditionnelle sur la colonne Total : les valeurs à 0 ressortent en rouge, signalant une modalité mal retranscrite.<br>Je regarde ensuite sur la base de donnée quel est le problème entre mes modalités et le questionnaire.</figcaption></figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:10px"><img src="assets/aidea-excel-recherche.png" alt="Excel — Rechercher et remplacer" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid #EBD6CC"><figcaption style="font-size:15px;line-height:1.5;color:#544f45;text-wrap:pretty">Utilisation du Ctrl + H (rechercher et remplacer) pour nettoyer les données, notamment la ponctuation et harmoniser les modalités.</figcaption></figure>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:700 22px/1.2 'IBM Plex Mono',monospace;color:#B25A3C">Étape 4</span>
+        <h3 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Regrouper les données</h3>
+      </div>
+      <p style="margin:0;max-width:none;color:#413d35;text-align:justify;hyphens:manual">Après avoir vérifié la cohérence des chiffres sur toutes les questions, j'ai d'abord réalisé plusieurs TCD (tableaux croisés dynamiques) pour obtenir la somme des répondants par modalité. J'ai ensuite créé une feuille de résultats où j'ai transposé verticalement les modalités et le nombre de répondants, pour les afficher dans des tableaux à l'aide de la fonction « TRANSPOSE ».</p>
+      <figure style="margin:0 auto;width:100%;max-width:693px;display:flex;flex-direction:column;gap:10px"><img src="assets/aidea-excel-tableau-reponses.png" alt="Excel — feuille de résultats regroupant les réponses par question" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid #EBD6CC"><figcaption style="font-size:15px;line-height:1.5;color:#544f45;text-wrap:pretty">Feuille de résultats : un tableau par réponses qualitatives, avec les modalités et le nombre de répondants. Le surlignage vert met en avant (avec une mise en forme conditionnelle), les valeurs les plus élévées.</figcaption></figure>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:700 22px/1.2 'IBM Plex Mono',monospace;color:#B25A3C">Étape 5</span>
+        <h3 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Faire parler les données</h3>
+      </div>
+      <p style="margin:0;max-width:none;color:#413d35;text-align:justify;hyphens:manual">Une fois les tableaux transposés, j'ai réalisé 4 graphiques. Ils servent à donner une vision générale du panel.</p>
+      <div class="mq-grid2" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 28px;align-items:start">
+        <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><img src="assets/aidea-graph-age.png" alt="Nombre de répondants par tranches d'âges" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid #EBD6CC"><figcaption style="display:flex;gap:10px;align-items:baseline;font:inherit;color:#413d35"><span style="font-weight:600;color:#B25A3C">01</span>Profil des répondants → âge</figcaption></figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><img src="assets/aidea-graph-benevolat.png" alt="Répondants qui souhaitent ou non réaliser une activité bénévole" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid #EBD6CC"><figcaption style="display:flex;gap:10px;align-items:baseline;font:inherit;color:#413d35"><span style="font-weight:600;color:#B25A3C">02</span>Rapport au bénévolat → expérience / familiarité</figcaption></figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><img src="assets/aidea-graph-engagement.png" alt="Type d'engagement souhaité" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid #EBD6CC"><figcaption style="display:flex;gap:10px;align-items:baseline;font:inherit;color:#413d35"><span style="font-weight:600;color:#B25A3C">03</span>Type d'engagement recherché</figcaption></figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><img src="assets/aidea-graph-dispo.png" alt="Disponibilités des répondants" style="width:100%;height:auto;display:block;border-radius:12px;border:1px solid #EBD6CC"><figcaption style="display:flex;gap:10px;align-items:baseline;font:inherit;color:#413d35"><span style="font-weight:600;color:#B25A3C">04</span>Disponibilités</figcaption></figure>
+      </div>
+      <p style="margin:8px 0 0;max-width:none;color:#413d35;text-align:justify;hyphens:manual">Mais au-delà du profil des répondants, l'analyse des réponses permet d'identifier plusieurs besoins susceptibles d'orienter la conception de la plateforme.</p>
+    </div>
+  </div>
+
+  <!-- CHAPITRE 2 — Insights (terracotta) -->
+  <div id="matrice" style="background:#B25A3C;color:#FFF8F2">
+    <div data-reveal="" style="box-sizing:border-box;max-width:1600px;margin:0 auto;opacity:0;transform:translateY(12px);filter:blur(4px);transition:opacity .35s cubic-bezier(.2,.7,.2,1),transform .35s cubic-bezier(.2,.7,.2,1),filter .35s cubic-bezier(.2,.7,.2,1);padding:clamp(56px,7vw,96px) clamp(24px,8vw,160px);display:flex;flex-direction:column;gap:48px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:500 22px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#FFE3D6">Chapitre 2</span>
+        <h2 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#FFF8F2">Les insights</h2>
+        <p style="margin:12px 0 0;max-width:none;color:#FFF8F2;text-align:justify;hyphens:manual">L'analyse des réponses au questionnaire a permis d'identifier plusieurs tendances importantes concernant les attentes, les motivations et les contraintes des personnes interrogées. Ces résultats ne permettent pas à eux seuls de représenter l'ensemble des futurs utilisateurs, les données ayant été simulées dans le cadre de ce projet, mais ils permettent de faire émerger plusieurs hypothèses et besoins UX qui vont orienter la conception de la plateforme pour cette application fictive.</p>
+      </div>
+      <div class="mq-grid2" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px">
+        <div style="display:flex;flex-direction:column;gap:10px;padding:24px 4px 0;border-top:1px solid rgba(255,248,242,.45)"><span style="font:700 clamp(48px,6vw,72px)/1 'Prompt',sans-serif;color:#FFF8F2">37%</span><p style="margin:0;font-size:16px;line-height:1.5;color:#FFF8F2;text-align:justify;hyphens:manual">répondants disponibles pendant les vacances scolaires, et 36 dont les disponibilités changent régulièrement</p></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding:24px 4px 0;border-top:1px solid rgba(255,248,242,.45)"><span style="font:700 clamp(48px,6vw,72px)/1 'Prompt',sans-serif;color:#FFF8F2">26%</span><p style="margin:0;font-size:16px;line-height:1.5;color:#FFF8F2;text-align:justify;hyphens:manual">aimeraient participer à une mission avec un proche ou un groupe</p></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding:24px 4px 0;border-top:1px solid rgba(255,248,242,.45)"><span style="font:700 clamp(48px,6vw,72px)/1 'Prompt',sans-serif;color:#FFF8F2">21%</span><p style="margin:0;font-size:16px;line-height:1.5;color:#FFF8F2;text-align:justify;hyphens:manual">jugent indispensable de connaître la durée estimée d'une mission avant de s'inscrire</p></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:20px">
+        <article style="display:flex;flex-direction:column;gap:14px;padding:28px;border-radius:16px;background:#FFF8F2;color:#2b2a26">
+          <div style="display:flex;gap:14px;align-items:center"><span style="flex:0 0 auto;font:700 28px/1 'Prompt',sans-serif;color:#B25A3C">01</span><h3 style="margin:0;font:600 18px/1.35 'Prompt',sans-serif;color:#8C3F26;text-wrap:balance">La proximité géographique peut jouer un rôle important dans le choix d'une mission</h3></div>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#413d35;text-align:justify;hyphens:none" lang="fr">La localisation apparaît comme un élément à prendre en compte dans la recherche d'une mission de bénévolat. Parmi les 100 répondants, 23 personnes déclarent être motivées par la possibilité de participer à des activités près de chez elles. Par ailleurs, 19 personnes identifient une mission trop éloignée de leur domicile comme un frein potentiel à leur engagement. Ces résultats suggèrent que la proximité géographique peut constituer un critère important dans le passage de l'envie de bénévolat à l'inscription. L'utilisateur doit pouvoir identifier rapidement les missions accessibles depuis son lieu de vie, sans avoir à parcourir de nombreuses annonces qui ne correspondent pas à sa zone géographique.</p>
+          <div style="margin-top:auto;display:flex;flex-direction:column;gap:6px;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C3F26">Implication UX</span><p style="margin:0;font:500 15px/1.55 'IBM Plex Sans',sans-serif;color:#2b2a26;text-align:justify;hyphens:manual">La localisation doit être intégrée comme un critère central de recherche, avec la possibilité de filtrer les missions selon une zone géographique ou une distance.</p></div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:14px;padding:28px;border-radius:16px;background:#FFF8F2;color:#2b2a26">
+          <div style="display:flex;gap:14px;align-items:center"><span style="flex:0 0 auto;font:700 28px/1 'Prompt',sans-serif;color:#B25A3C">02</span><h3 style="margin:0;font:600 18px/1.35 'Prompt',sans-serif;color:#8C3F26;text-wrap:balance">Les disponibilités sont variables et nécessitent une expérience flexible</h3></div>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#413d35;text-align:justify;hyphens:none" lang="fr">Les réponses concernant les disponibilités montrent que les utilisateurs n'ont pas nécessairement un emploi du temps fixe. 36 répondants indiquent que leurs disponibilités changent régulièrement. Les périodes de vacances scolaires sont également particulièrement représentées, avec 37 répondants intéressés par ces créneaux. Les disponibilités en semaine le matin concernent quant à elles 33 personnes. Cette diversité montre qu'une plateforme de bénévolat ne peut pas uniquement proposer une logique d'engagement régulier. Certains utilisateurs peuvent avoir des créneaux disponibles de manière ponctuelle, tandis que d'autres peuvent rechercher une mission récurrente ou profiter de périodes spécifiques comme les vacances.</p>
+          <div style="margin-top:auto;display:flex;flex-direction:column;gap:6px;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C3F26">Implication UX</span><p style="margin:0;font:500 15px/1.55 'IBM Plex Sans',sans-serif;color:#2b2a26;text-align:justify;hyphens:manual">La recherche doit pouvoir s'adapter à des disponibilités variables, grâce à des filtres par jour, créneau horaire, durée ou période d'engagement.</p></div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:14px;padding:28px;border-radius:16px;background:#FFF8F2;color:#2b2a26">
+          <div style="display:flex;gap:14px;align-items:center"><span style="flex:0 0 auto;font:700 28px/1 'Prompt',sans-serif;color:#B25A3C">03</span><h3 style="margin:0;font:600 18px/1.35 'Prompt',sans-serif;color:#8C3F26;text-wrap:balance">Les utilisateurs ont besoin d'informations précises avant de s'engager</h3></div>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#413d35;text-align:justify;hyphens:none" lang="fr">Les réponses concernant les informations indispensables avant l'inscription montrent un besoin important de transparence et de réassurance. La durée estimée de la mission est citée par 21 répondants, tandis que 20 personnes souhaitent pouvoir consulter les avis ou témoignages d'autres bénévoles. Les coordonnées d'une personne référente sont citées par 19 répondants. D'autres informations sont également fréquemment mentionnées, comme le niveau d'expérience nécessaire, les modalités d'annulation ou encore l'âge minimum requis, chacun étant cité par 18 répondants. Ces résultats suggèrent que l'utilisateur doit pouvoir comprendre précisément ce que représente une mission avant de s'engager. La fiche mission ne doit donc pas seulement présenter le titre et la description de l'activité, mais permettre à l'utilisateur de se projeter concrètement dans son futur engagement.</p>
+          <div style="margin-top:auto;display:flex;flex-direction:column;gap:6px;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C3F26">Implication UX</span><p style="margin:0;font:500 15px/1.55 'IBM Plex Sans',sans-serif;color:#2b2a26;text-align:justify;hyphens:manual">Concevoir une fiche mission détaillée regroupant les informations essentielles : durée, horaires, lieu, prérequis, personne référente, modalités d'annulation et témoignages.</p></div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:14px;padding:28px;border-radius:16px;background:#FFF8F2;color:#2b2a26">
+          <div style="display:flex;gap:14px;align-items:center"><span style="flex:0 0 auto;font:700 28px/1 'Prompt',sans-serif;color:#B25A3C">04</span><h3 style="margin:0;font:600 18px/1.35 'Prompt',sans-serif;color:#8C3F26;text-wrap:balance">Les formes d'engagement recherchées sont diverses</h3></div>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#413d35;text-align:justify;hyphens:none" lang="fr">Les réponses montrent que les utilisateurs n'ont pas tous la même conception du bénévolat. Certains recherchent des engagements ponctuels, tandis que d'autres souhaitent s'impliquer de manière plus régulière. 19 répondants se déclarent intéressés par des missions pendant les vacances scolaires et 17 par des événements exceptionnels. 18 personnes privilégient un engagement régulier chaque mois, alors que 8 seulement indiquent préférer un engagement régulier chaque semaine. Les missions de quelques heures représentent également un format recherché par 14 répondants. Ces résultats mettent en évidence la nécessité de proposer plusieurs niveaux d'engagement afin de ne pas limiter l'accès au bénévolat aux personnes capables de s'investir régulièrement. Une plateforme peut ainsi répondre à des besoins très différents, allant d'une participation ponctuelle à un engagement récurrent.</p>
+          <div style="margin-top:auto;display:flex;flex-direction:column;gap:6px;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C3F26">Implication UX</span><p style="margin:0;font:500 15px/1.55 'IBM Plex Sans',sans-serif;color:#2b2a26;text-align:justify;hyphens:manual">Permettre aux utilisateurs de rechercher et de filtrer les missions selon leur durée et leur type d'engagement : ponctuel, événementiel, régulier, quelques heures, vacances, etc.</p></div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:14px;padding:28px;border-radius:16px;background:#FFF8F2;color:#2b2a26">
+          <div style="display:flex;gap:14px;align-items:center"><span style="flex:0 0 auto;font:700 28px/1 'Prompt',sans-serif;color:#B25A3C">05</span><h3 style="margin:0;font:600 18px/1.35 'Prompt',sans-serif;color:#8C3F26;text-wrap:balance">Le bénévolat peut également être une expérience sociale</h3></div>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#413d35;text-align:justify;hyphens:none" lang="fr">L'analyse des motivations fait apparaître une dimension sociale intéressante. 24 répondants déclarent être motivés par la possibilité de faire une activité avec des proches, tandis que 23 souhaitent participer à des activités près de chez eux. La dimension collective apparaît également dans les fonctionnalités souhaitées : 26 répondants indiquent qu'ils aimeraient pouvoir participer à une mission avec un proche ou un groupe. Ces résultats suggèrent que pour une partie des utilisateurs, le bénévolat peut représenter plus qu'une simple action solidaire. Il peut également être une occasion de partager une activité, de rencontrer d'autres personnes ou de créer du lien social.</p>
+          <div style="margin-top:auto;display:flex;flex-direction:column;gap:6px;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C3F26">Implication UX</span><p style="margin:0;font:500 15px/1.55 'IBM Plex Sans',sans-serif;color:#2b2a26;text-align:justify;hyphens:manual">Intégrer une dimension collective dans l'expérience, par exemple en permettant de participer à une mission avec un proche ou d'identifier les missions adaptées à une participation en groupe.</p></div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:14px;padding:28px;border-radius:16px;background:#FFF8F2;color:#2b2a26">
+          <div style="display:flex;gap:14px;align-items:center"><span style="flex:0 0 auto;font:700 28px/1 'Prompt',sans-serif;color:#B25A3C">06</span><h3 style="margin:0;font:600 18px/1.35 'Prompt',sans-serif;color:#8C3F26;text-wrap:balance">La personnalisation peut faciliter la recherche d'une mission adaptée</h3></div>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#413d35;text-align:justify;hyphens:none" lang="fr">Les réponses montrent également un intérêt pour une expérience personnalisée. 19 répondants souhaitent pouvoir filtrer les missions selon le niveau d'expérience et 18 souhaitent recevoir des recommandations personnalisées. 15 personnes se déclarent intéressées par des alertes lorsqu'une mission correspondant à leurs critères est disponible. Cette attente peut être mise en parallèle avec les motivations exprimées par les répondants. 22 personnes souhaitent transmettre leurs connaissances ou leur expérience, tandis que 19 souhaitent acquérir de nouvelles compétences et 16 souhaitent découvrir un domaine professionnel. Ces résultats suggèrent que la recherche d'une mission peut être guidée non seulement par la cause défendue, mais également par les compétences que l'utilisateur souhaite mettre à contribution ou développer.</p>
+          <div style="margin-top:auto;display:flex;flex-direction:column;gap:6px;padding:16px 18px;border-radius:12px;background:#F6E6DE"><span style="font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C3F26">Implication UX</span><p style="margin:0;font:500 15px/1.55 'IBM Plex Sans',sans-serif;color:#2b2a26;text-align:justify;hyphens:manual">Proposer une expérience personnalisée permettant de prendre en compte les centres d'intérêt, les compétences, le niveau d'expérience et les préférences de l'utilisateur afin de lui présenter des missions pertinentes.</p></div>
+        </article>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;padding-top:32px;border-top:1px solid rgba(255,248,242,.45)">
+        <h3 style="margin:0;text-align:center;font:400 italic 34px/1.15 'Instrument Serif',serif;color:#FFF8F2">De la donnée… au design</h3>
+        <div style="display:flex;flex-direction:column;gap:14px;color:#FFF8F2;text-align:justify;hyphens:none">
+          <p style="margin:0;text-align:justify;hyphens:manual">L'analyse des données permet ainsi de faire émerger plusieurs besoins principaux. Les utilisateurs doivent pouvoir trouver une mission adaptée à leur localisation et à leurs disponibilités, comprendre précisément ce qui est attendu avant de s'engager et identifier facilement les missions correspondant à leurs motivations, leurs compétences et leur niveau d'expérience.</p>
+          <p style="margin:0;text-align:justify;hyphens:manual">La dimension flexible et sociale du bénévolat apparaît également comme un élément important à prendre en compte dans la conception. L'expérience doit pouvoir s'adapter à différents niveaux d'engagement et permettre, lorsque cela est souhaité, de participer avec d'autres personnes.</p>
+          <p style="margin:0;text-align:justify;hyphens:manual">Ces différents enseignements constituent la base de la suite de la démarche UX. Ils vont permettre de construire les profils utilisateurs, d'identifier leurs besoins et leurs principaux points de friction, puis de traduire ces besoins en fonctionnalités et en choix de conception pour la plateforme.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPITRE 3 — Synthèse (blanc) -->
+  <div id="insights" data-reveal="" style="box-sizing:border-box;max-width:1600px;margin:0 auto;opacity:0;transform:translateY(12px);filter:blur(4px);transition:opacity .35s cubic-bezier(.2,.7,.2,1),transform .35s cubic-bezier(.2,.7,.2,1),filter .35s cubic-bezier(.2,.7,.2,1);padding:clamp(56px,7vw,96px) clamp(24px,8vw,160px);display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font:500 22px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#B25A3C">Chapitre 3</span>
+      <h2 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Les personas</h2>
+    </div>
+    <p style="margin:0;color:#413d35;text-align:justify;hyphens:manual">À partir de ces tendances, j’ai cherché à représenter les différents profils d’utilisateurs susceptibles d’utiliser la plateforme. Les personas suivants ont été construits à partir des comportements, motivations et contraintes identifiés dans l’analyse des données.</p>
+    <div id="personas" style="display:flex;flex-direction:column;gap:20px;max-width:800px;width:100%;margin:0 auto">
+      <div style="overflow:hidden;border-radius:14px">
+        <div style="{{ pTrack }}">
+          <img src="assets/aidea-persona-lea.png" alt="Persona Léa, 26 ans — l’engagée du quotidien" style="display:block;flex:0 0 100%;width:100%;height:auto">
+          <img src="assets/aidea-persona-sophie.png" alt="Persona Thomas, 32 ans — le volontaire qui met ses compétences au service des autres" style="display:block;flex:0 0 100%;width:100%;height:auto">
+          <img src="assets/aidea-persona-thomas.png" alt="Persona Sophie, 68 ans — l’engagée qui souhaite donner de son temps" style="display:block;flex:0 0 100%;width:100%;height:auto">
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+        <button onClick="{{ pPrev }}" aria-label="Persona précédent" style="width:44px;height:44px;border-radius:50%;border:1px solid #B25A3C;background:transparent;color:#B25A3C;font:500 20px/1 'Prompt',sans-serif;cursor:pointer" style-hover="background:#B25A3C;color:#FFF8F2">←</button>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+          <span style="font:500 14px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#8C3F26">{{ pLabel }}</span>
+          <div style="display:flex;gap:8px">
+            <button onClick="{{ pGo0 }}" aria-label="Léa" style="{{ pDot0 }}"></button>
+            <button onClick="{{ pGo1 }}" aria-label="Thomas" style="{{ pDot1 }}"></button>
+            <button onClick="{{ pGo2 }}" aria-label="Sophie" style="{{ pDot2 }}"></button>
+          </div>
+        </div>
+        <button onClick="{{ pNext }}" aria-label="Persona suivant" style="width:44px;height:44px;border-radius:50%;border:1px solid #B25A3C;background:transparent;color:#B25A3C;font:500 20px/1 'Prompt',sans-serif;cursor:pointer" style-hover="background:#B25A3C;color:#FFF8F2">→</button>
+      </div>
+    </div>
+    <div id="pain-points" lang="fr" style="display:flex;flex-direction:column;gap:28px;padding-top:32px;border-top:1px solid #EAD3C8">
+      <h3 style="margin:0;text-align:center;font:400 italic 34px/1.15 'Instrument Serif',serif;color:#8C3F26">Pain points et besoins</h3>
+
+      <div style="border-radius:18px;background:#FFF8EC;border:1px solid #F3DDB0;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+          <span style="font:600 22px/1.2 'Prompt',sans-serif;color:#2B2620">Léa, 26 ans</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:16px">
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:12px;padding:18px">
+            <span style="font:500 13px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#C0392B">Pain points identifiés</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Son manque de temps et ses horaires de travail peuvent limiter sa capacité à s’engager. Elle ne sait pas toujours si elle possède les compétences nécessaires pour une mission et peut douter de sa capacité à réellement contribuer. Elle peut également avoir besoin d’être rassurée sur l’impact concret de son engagement.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:12px;padding:18px">
+            <span style="font:500 13px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#8A6A1F">Besoins utilisateurs</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Pouvoir identifier des missions compatibles avec son emploi du temps et correspondant à ses capacités. Comprendre clairement ce qui est attendu et les compétences nécessaires afin de savoir si elle est en mesure de participer. Être rassurée sur l’utilité et l’impact de son engagement ainsi qu’être guidée pour trouver rapidement une première mission adaptée à son profil.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:12px;padding:18px">
+            <span style="font:500 13px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#B25A3C">Opportunités UX</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Mettre en place des filtres par durée, disponibilités et localisation. Afficher clairement les compétences recherchées et le niveau attendu sur chaque mission. Détailler concrètement la mission et son impact afin de faciliter la projection et de renforcer la confiance avant l’inscription. Créer un parcours de découverte guidé avec des recommandations personnalisées.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-radius:18px;background:#F1F7EA;border:1px solid #CFE3BC;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+          <span style="font:600 22px/1.2 'Prompt',sans-serif;color:#2B2620">Thomas, 32 ans</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:16px">
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:12px;padding:18px">
+            <span style="font:500 13px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#C0392B">Pain points identifiés</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Il a parfois du mal à identifier les missions qui correspondent réellement à ses compétences. Il craint également un manque de suivi ou de clarté une fois la mission commencée. Ses contraintes professionnelles peuvent limiter son temps disponible.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:12px;padding:18px">
+            <span style="font:500 13px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#4A7A2C">Besoins utilisateurs</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Trouver facilement des missions correspondant à ses compétences. Comprendre clairement le rôle attendu et les objectifs de la mission. Pouvoir suivre ses engagements dans le temps et savoir où il en est dans ses missions.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:12px;padding:18px">
+            <span style="font:500 13px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#B25A3C">Opportunités UX</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Intégrer un filtre par compétences et préciser les compétences recherchées sur chaque mission. Créer dans l’espace personnel une rubrique « Mes missions » permettant de retrouver les missions à venir, en cours et réalisées, afin d’assurer un meilleur suivi de son engagement.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-radius:18px;background:#F5F1FB;border:1px solid #DCD0EE;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+          <span style="font:600 22px/1.2 'Prompt',sans-serif;color:#2B2620">Sophie, 68 ans</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:16px">
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:12px;padding:18px">
+            <span style="font:500 13px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#C0392B">Pain points identifiés</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Elle peut avoir besoin d’être rassurée avant de s’inscrire sur une plateforme numérique. Les modalités d’engagement peuvent manquer de clarté. Elle peut également douter de l’adéquation entre son expérience et les compétences demandées. Une interface trop complexe peut constituer une difficulté supplémentaire.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:12px;padding:18px">
+            <span style="font:500 13px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#6B4FA0">Besoins utilisateurs</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Comprendre simplement le fonctionnement de la mission et ce qui est attendu. Être accompagnée dans sa recherche. Trouver des missions compatibles avec ses disponibilités et son expérience. Pouvoir consulter des retours d’autres bénévoles avant de s’engager. Se sentir en confiance au moment de l’inscription.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;border-radius:12px;padding:18px">
+            <span style="font:500 13px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#B25A3C">Opportunités UX</span>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Concevoir une interface simple et rassurante. Présenter les informations de manière claire et hiérarchisée. Valoriser l’expérience et les compétences déjà acquises. Ajouter des témoignages d’autres bénévoles. Simplifier le parcours d’inscription et proposer un contact clairement identifié auprès de l’association.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="user-flows" lang="fr" style="display:flex;flex-direction:column;gap:28px;padding-top:32px;border-top:1px solid #EAD3C8">
+      <h3 style="margin:0;text-align:center;font:400 italic 34px/1.15 'Instrument Serif',serif;color:#8C3F26">Les user flows</h3>
+      <p style="margin:0;color:#413d35;text-align:justify;hyphens:manual">Les parcours utilisateurs ont été construits directement à partir des pain points identifiés et des résultats du questionnaire. Chaque flow répond aux freins propres à un persona. Le parcours de Léa répond notamment à son frein « je ne sais pas par où commencer » : un parcours de découverte guidé l’oriente vers une première mission adaptée à son profil. Il fait aussi le lien avec un autre résultat de l’enquête : <strong style="color:#8C3F26">18 % des répondants souhaitaient des recommandations personnalisées</strong>. Le parcours de Thomas s’appuie sur un filtre par compétences, puis sur la lecture du descriptif de la mission pour comprendre précisément le rôle attendu. Celui de Sophie combine les filtres par localisation et par thématique ; elle consulte ensuite les avis pour être rassurée, avant de contacter la personne référente de la mission. Pour gagner du temps sur la mise en forme, j’ai utilisé l’IA intégrée à Figma : je lui ai décrit avec 3 prompts le parcours attendu pour chaque persona. J’ai ensuite retravaillé les formes et les couleurs, tout en conservant la structure proposée par l’IA.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start">
+        <figure style="margin:0;flex:1 1 min(100%,480px);min-width:0;display:flex;flex-direction:column;gap:10px">
+          <img src="assets/aidea-user-flows.png" alt="Les trois user flows de Léa, Thomas et Sophie dans Figma" style="display:block;width:100%;height:auto;border-radius:14px;border:1px solid #EAD3C8">
+          <figcaption style="font:500 13px/1.3 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#B25A3C">User flows — Léa, Thomas, Sophie</figcaption>
+        </figure>
+        <figure class="mq-prompt" style="margin:0;flex:0 0 auto;display:flex;flex-direction:column;gap:10px">
+          <img src="assets/aidea-prompt-figma.png" alt="Prompt envoyé à l’IA de Figma pour générer le flow" style="display:block;width:220px;max-width:100%;height:auto;border-radius:10px;border:1px solid #EAD3C8">
+          <a href="https://www.figma.com/board/XY40B5eQRxPGd5fggthhBQ/User-flow-persona?node-id=0-1&amp;t=t8WoR1K6LGa1uAh5-1" target="_blank" rel="noopener" style="box-sizing:border-box;width:220px;max-width:100%;display:flex;align-items:center;justify-content:center;margin-top:0;padding:10px 12px;border-radius:999px;background:#B25A3C;color:#FFF8F2;font:500 13px/1 'IBM Plex Sans',sans-serif;text-decoration:none;white-space:nowrap" style-hover="background:#8C3F26">Voir sur Figma →</a>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPITRE 4 — Fonctionnalités (terracotta) -->
+  <div id="fonctionnalites" lang="fr" style="background:#B25A3C;color:#FFF8F2">
+    <div data-reveal="" style="box-sizing:border-box;max-width:1600px;margin:0 auto;opacity:0;transform:translateY(12px);filter:blur(4px);transition:opacity .35s cubic-bezier(.2,.7,.2,1),transform .35s cubic-bezier(.2,.7,.2,1),filter .35s cubic-bezier(.2,.7,.2,1);padding:clamp(56px,7vw,96px) clamp(24px,8vw,160px);display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:500 22px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#FFE3D6">Chapitre 4</span>
+        <h2 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#FFF8F2">Des besoins aux fonctionnalités</h2>
+        <p style="margin:12px 0 0;color:#FFF8F2;text-align:justify;hyphens:manual">À partir des besoins identifiés, j’ai défini les fonctionnalités permettant d’y répondre et de structurer l’expérience de la plateforme.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="background:#FFF8F2;border-radius:18px;overflow:hidden">
+          <div class="mq-hide" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr);gap:16px;padding:14px 20px;background:#F6E6DE;font:500 12px/1.2 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#8C3F26"><span>Besoin identifié</span><span>Fonctionnalité</span><span>Persona concerné</span></div>
+          <div class="mq-grid2" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr);gap:16px;align-items:center;padding:16px 20px;">
+            <span style="color:#2B2620">Savoir par où commencer</span>
+            <span style="font-weight:600;color:#8C3F26">→ Parcours guidé</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#FFF1CC;color:#6E510C">Léa</span></div>
+          </div>
+          <div class="mq-grid2" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr);gap:16px;align-items:center;padding:16px 20px;border-top:1px solid #EAD3C8">
+            <span style="color:#2B2620">Trouver une mission adaptée à ses compétences</span>
+            <span style="font-weight:600;color:#8C3F26">→ Filtre par compétences</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#E3F0D6;color:#3A6322">Thomas</span></div>
+          </div>
+          <div class="mq-grid2" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr);gap:16px;align-items:center;padding:16px 20px;border-top:1px solid #EAD3C8">
+            <span style="color:#2B2620">Suivre ses engagements</span>
+            <span style="font-weight:600;color:#8C3F26">→ Espace « Mes missions »</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#E3F0D6;color:#3A6322">Thomas</span></div>
+          </div>
+          <div class="mq-grid2" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr);gap:16px;align-items:center;padding:16px 20px;border-top:1px solid #EAD3C8">
+            <span style="color:#2B2620">Être rassurée avant de s’inscrire</span>
+            <span style="font-weight:600;color:#8C3F26">→ Fiche mission détaillée</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#FFF1CC;color:#6E510C">Léa</span><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#ECE4F7;color:#553A86">Sophie</span></div>
+          </div>
+          <div class="mq-grid2" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr);gap:16px;align-items:center;padding:16px 20px;border-top:1px solid #EAD3C8">
+            <span style="color:#2B2620">Vérifier que la mission correspond à son emploi du temps</span>
+            <span style="font-weight:600;color:#8C3F26">→ Filtres durée / disponibilités</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#FFF1CC;color:#6E510C">Léa</span><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#ECE4F7;color:#553A86">Sophie</span></div>
+          </div>
+          <div class="mq-grid2" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr);gap:16px;align-items:center;padding:16px 20px;border-top:1px solid #EAD3C8">
+            <span style="color:#2B2620">Être rassurée par l’expérience des autres</span>
+            <span style="font-weight:600;color:#8C3F26">→ Témoignages</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#ECE4F7;color:#553A86">Sophie</span></div>
+          </div>
+          <div class="mq-grid2" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr);gap:16px;align-items:center;padding:16px 20px;border-top:1px solid #EAD3C8">
+            <span style="color:#2B2620">Participer avec d’autres</span>
+            <span style="font-weight:600;color:#8C3F26">→ Mission avec un proche / groupe</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#FFF1CC;color:#6E510C">Léa</span><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#ECE4F7;color:#553A86">Sophie</span></div>
+          </div>
+          <div class="mq-grid2" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,.8fr);gap:16px;align-items:center;padding:16px 20px;border-top:1px solid #EAD3C8">
+            <span style="color:#2B2620">Découvrir des missions pertinentes</span>
+            <span style="font-weight:600;color:#8C3F26">→ Recommandations personnalisées</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#FFF1CC;color:#6E510C">Léa</span><span style="padding:5px 12px;border-radius:999px;font:500 13px/1 'IBM Plex Sans',sans-serif;background:#E3F0D6;color:#3A6322">Thomas</span></div>
+          </div>
+        </div>
+        <p style="margin:0;color:#FFF8F2;text-align:justify;hyphens:manual">Ce parcours répond à plusieurs besoins identifiés lors de l’analyse : être guidée pour savoir par où commencer, trouver une mission compatible avec son emploi du temps et ses compétences et disposer d’informations suffisantes pour se sentir en confiance avant l’inscription.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPITRE 5 — Benchmark (blanc) -->
+  <div id="benchmark" lang="fr" data-reveal="" style="box-sizing:border-box;max-width:1600px;margin:0 auto;opacity:0;transform:translateY(12px);filter:blur(4px);transition:opacity .35s cubic-bezier(.2,.7,.2,1),transform .35s cubic-bezier(.2,.7,.2,1),filter .35s cubic-bezier(.2,.7,.2,1);padding:clamp(56px,7vw,96px) clamp(24px,8vw,160px);display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:500 22px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#B25A3C">Chapitre 5</span>
+        <h2 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Le benchmark concurrentiel</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <p style="margin:0;color:#413d35;text-align:justify;hyphens:manual">Afin d'orienter mon design en respectant les critères des différents personas ainsi que les besoins, j'ai fait une étude concurrentielle en regardant les concurrents directs comme <em>jeveuxaider.gouv.fr</em>, <em>bénénova.fr</em>, <em>Francebénévolat.org</em>, <em>tousbenevoles.org</em> ou encore <em>anec.etudesetchantiers.org</em>. L’objectif de ce benchmark était d’identifier les pratiques intéressantes du secteur, mais également les opportunités d’amélioration pouvant nourrir la conception de ma propre plateforme.</p>
+        <div class="mq-grid2" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFF8F2;border:1px solid #EAD3C8;border-radius:14px;padding:22px">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font:600 26px/1 'IBM Plex Mono',monospace;color:#B25A3C">01</span><span style="font:600 17px/1.3 'Prompt',sans-serif;color:#8C3F26">Accès aux missions</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Un premier enseignement concerne l’accès aux missions. Il me semble essentiel de pouvoir consulter les missions sans être contraint de créer un compte au préalable. Sur Benevolte.fr, l’inscription est nécessaire avant d’accéder aux missions, ce qui peut constituer un frein dans une première phase de découverte. Avant de s’engager, l’utilisateur doit pouvoir comprendre le fonctionnement de la plateforme, découvrir les missions disponibles et vérifier qu’elles correspondent à ses attentes. La création d’un compte pourra donc intervenir plus tard, au moment où l’utilisateur souhaite réellement s’inscrire à une mission.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFF8F2;border:1px solid #EAD3C8;border-radius:14px;padding:22px">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font:600 26px/1 'IBM Plex Mono',monospace;color:#B25A3C">02</span><span style="font:600 17px/1.3 'Prompt',sans-serif;color:#8C3F26">Des filtres clairs</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Le benchmark met également en évidence l’importance de proposer des filtres clairs et pertinents, sans multiplier les critères dès le départ. Certaines plateformes, comme JeVeuxAider.gouv.fr, proposent un nombre important de filtres permettant notamment de sélectionner l’activité, le public aidé, les domaines d’action ou encore certaines opérations nationales. Cette richesse peut être intéressante, mais elle peut également rendre la recherche plus complexe. Pour ma plateforme, je souhaite donc privilégier une sélection de filtres réellement utiles, directement liés aux besoins identifiés lors de la recherche utilisateur.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFF8F2;border:1px solid #EAD3C8;border-radius:14px;padding:22px">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font:600 26px/1 'IBM Plex Mono',monospace;color:#B25A3C">03</span><span style="font:600 17px/1.3 'Prompt',sans-serif;color:#8C3F26">Critères de recherche</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">La recherche pourra ainsi s’appuyer sur plusieurs critères principaux : le domaine d’action, le public que l’utilisateur souhaite aider et les savoir‑faire qu’il souhaite mettre à contribution. Ce dernier critère répond notamment au besoin identifié chez Thomas, qui souhaite pouvoir trouver des missions correspondant à ses compétences.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFF8F2;border:1px solid #EAD3C8;border-radius:14px;padding:22px">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font:600 26px/1 'IBM Plex Mono',monospace;color:#B25A3C">04</span><span style="font:600 17px/1.3 'Prompt',sans-serif;color:#8C3F26">Mode de participation</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Un autre élément intéressant relevé dans le benchmark concerne le mode de participation. Plusieurs plateformes distinguent les missions réalisables sur place et celles pouvant être réalisées à distance. France Bénévolat utilise notamment la notion de « télé‑bénévolat », qui permet d'identifier rapidement les missions réalisables à distance. Ce critère sera donc intégré à la plateforme. Dans une logique d’accessibilité et d’inclusivité, le filtre permettant d’identifier les missions accessibles aux personnes à mobilité réduite pourra également être repris.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFF8F2;border:1px solid #EAD3C8;border-radius:14px;padding:22px">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font:600 26px/1 'IBM Plex Mono',monospace;color:#B25A3C">05</span><span style="font:600 17px/1.3 'Prompt',sans-serif;color:#8C3F26">Âge et conditions</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Les informations liées à l’âge et aux conditions de participation constituent également un critère important. JeVeuxAider.gouv.fr indique par exemple directement sur certaines cartes de missions lorsqu’une mission est accessible à partir de 16 ans. Ce principe répond à une attente identifiée lors du questionnaire et pourra être repris afin de permettre à l’utilisateur de vérifier rapidement si une mission lui est accessible.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFF8F2;border:1px solid #EAD3C8;border-radius:14px;padding:22px">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font:600 26px/1 'IBM Plex Mono',monospace;color:#B25A3C">06</span><span style="font:600 17px/1.3 'Prompt',sans-serif;color:#8C3F26">Participer en groupe</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">La possibilité de participer à une mission en groupe constitue également une piste intéressante. Cette fonctionnalité répond notamment aux besoins identifiés dans les personas et permettrait de faciliter les engagements à plusieurs, avec un proche ou avec un groupe.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFF8F2;border:1px solid #EAD3C8;border-radius:14px;padding:22px">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font:600 26px/1 'IBM Plex Mono',monospace;color:#B25A3C">07</span><span style="font:600 17px/1.3 'Prompt',sans-serif;color:#8C3F26">Localisation et disponibilités</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Concernant la localisation, je souhaite privilégier un système de recherche simple basé sur un département ou une ville, avec la possibilité de saisir directement la zone recherchée. Les utilisateurs pourront également préciser leurs disponibilités, soit à partir de créneaux prédéfinis, soit en sélectionnant des dates précises.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;background:#FFF8F2;border:1px solid #EAD3C8;border-radius:14px;padding:22px">
+            <div style="display:flex;align-items:baseline;gap:10px"><span style="font:600 26px/1 'IBM Plex Mono',monospace;color:#B25A3C">08</span><span style="font:600 17px/1.3 'Prompt',sans-serif;color:#8C3F26">Cartes de missions</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#413d35;text-align:justify;hyphens:none">Enfin, le benchmark montre l’importance de proposer des cartes de missions immédiatement compréhensibles. Bénénova propose notamment des intitulés explicites permettant d’identifier rapidement la nature de la mission ainsi que des informations essentielles comme la ville, le lieu ou l’horaire. Cette approche facilite le scan des résultats et permet à l’utilisateur de comparer rapidement les différentes missions avant d’ouvrir leur fiche détaillée. Je souhaite donc privilégier des cartes de missions contenant des informations essentielles et facilement repérables dès le premier regard.</p>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;padding-top:32px;border-top:1px solid #EAD3C8">
+        <h3 style="margin:0;text-align:center;font:400 italic 34px/1.15 'Instrument Serif',serif;color:#8C3F26">Synthèse des opportunités UX</h3>
+        <p style="margin:0;color:#413d35;text-align:justify;hyphens:manual">À la suite de ce benchmark, plusieurs principes de conception se dégagent : permettre la découverte des missions sans inscription préalable, simplifier la recherche grâce à des filtres pertinents, prendre en compte les différents modes et conditions de participation, faciliter la recherche géographique et temporelle et présenter des cartes de missions suffisamment explicites pour permettre une compréhension rapide de l’offre.</p>
+        <p style="margin:0;color:#413d35;text-align:justify;hyphens:manual">Ces enseignements, croisés avec les besoins identifiés lors du questionnaire et des personas, serviront de base à la conception de l’architecture de la plateforme et des premiers wireframes.</p>
+      </div>
+  </div>
+
+  <!-- CHAPITRE 6 — Conception (terracotta) -->
+  <div id="lofi" style="background:#B25A3C;color:#FFF8F2">
+    <div data-reveal="" style="box-sizing:border-box;max-width:1600px;margin:0 auto;opacity:0;transform:translateY(12px);filter:blur(4px);transition:opacity .35s cubic-bezier(.2,.7,.2,1),transform .35s cubic-bezier(.2,.7,.2,1),filter .35s cubic-bezier(.2,.7,.2,1);padding:clamp(56px,7vw,96px) clamp(24px,8vw,160px);display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:500 22px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#FFE3D6">Chapitre 6</span>
+        <h2 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#FFF8F2">Maquettes lo-fi</h2>
+        <p style="margin:12px 0 0;color:#FFF8F2;text-align:justify;hyphens:manual">Grâce aux insights, aux personas et au benchmark, j’ai pu construire une première ébauche de wireframes.</p>
+        <a href="https://www.figma.com/proto/HAvy4ajG5KpPqXxOYfuWxd/Aid%C3%A9a---projet-bien-%C3%AAtre-social?page-id=9%3A421&amp;node-id=9-676&amp;viewport=-393%2C-1179%2C1.11&amp;t=IBtMfGSqH13dLprK-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=9%3A676" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:12px 20px;border-radius:999px;background:#FFF8F2;color:#B25A3C;font:500 14px/1 'IBM Plex Sans',sans-serif;text-decoration:none;white-space:nowrap" style-hover="background:#FFE3D6">Tester le prototype →</a>
+      </div>
+      <video src="assets/aidea-wireframes.mp4" data-loop-video="" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="width:100%;height:auto;display:block;border-radius:14px;background:#F6E6DE"></video>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <p style="margin:0;color:#FFF8F2;text-align:justify;hyphens:manual">Les wireframes lo-fi m'ont permis de structurer les principaux parcours et de définir l'organisation des contenus et fonctionnalités.</p>
+        <p style="margin:0;color:#FFF8F2;text-align:justify;hyphens:manual">Dans le cadre de cette étude de cas, le périmètre s'arrête à la conception et au prototypage de l'interface. Les wireframes n'ont pas fait l'objet de tests utilisateurs ni d'une phase d'itération. La maquette haute fidélité a donc été développée à partir des enseignements issus de la recherche utilisateur, des personas, du benchmark et des choix définis lors de la phase de wireframing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPITRE 7 — Maquettes hi-fi (blanc) -->
+  <div id="hifi" lang="fr" style="box-sizing:border-box;max-width:1600px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(24px,8vw,160px);display:flex;flex-direction:column;gap:64px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font:500 22px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#B25A3C">Chapitre 7</span>
+      <h2 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Maquettes hi-fi</h2>
+      
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:48px;align-items:center">
+      <div style="justify-self:center;position:relative;width:min(100%,320px);aspect-ratio:411/843;border-radius:16% / 7.8%;overflow:hidden;filter:drop-shadow(0 18px 30px rgba(90,50,30,.22))">
+        <video src="assets/aidea-hifi-proto-v2.mp4" data-loop-video="" data-start-on-view="" data-rate="1.5" preload="auto" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="position:absolute;left:-182.37%;top:-12.11%;width:463.77%;height:128.27%;max-width:none;display:block"></video>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <span style="font:500 13px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#B25A3C">Parcours d'une première utilisation</span>
+        <p style="margin:0;color:#413d35;text-align:justify;hyphens:manual">La vidéo suit une personne qui découvre l'application. On lui propose de trouver une mission personnalisée : elle choisit d'abord les domaines qui l'intéressent, puis la distance depuis chez elle et le moment de la journée qu'elle souhaite consacrer au bénévolat. Trois missions lui sont alors proposées. Elle en ajoute une à ses favoris, ouvre une autre mission pour consulter ses informations, puis s'y inscrit.</p>
+        <a href="https://www.figma.com/proto/HAvy4ajG5KpPqXxOYfuWxd/Aid%C3%A9a---projet-bien-%C3%AAtre-social?node-id=77-60&amp;viewport=38%2C62%2C0.73&amp;t=V7bTq8ujmP4CJllC-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=77%3A60&amp;page-id=0%3A1" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:#B25A3C;color:#FFF8F2;font:500 14px/1 'IBM Plex Sans',sans-serif;text-decoration:none;white-space:nowrap" style-hover="background:#8C3F26">Tester le prototype complet →</a>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <h3 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Du lo-fi au hi-fi</h3>
+      <div class="mq-pairs" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="display:flex;flex-direction:column;gap:6px"><img src="assets/aidea-duree-lofi.png" alt="Wireframe lo-fi : choix des disponibilités" style="width:100%;height:auto;display:block;cursor:zoom-in"><span style="font:500 12px/1 'IBM Plex Mono',monospace;color:#6b655a">LO-FI</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><img src="assets/aidea-duree-hifi.png" alt="Maquette hi-fi : choix des disponibilités" style="width:100%;height:auto;display:block;cursor:zoom-in"><span style="font:500 12px/1 'IBM Plex Mono',monospace;color:#B25A3C">HI-FI</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="display:flex;flex-direction:column;gap:6px"><img src="assets/aidea-missions-lofi.png" alt="Wireframe lo-fi : liste des missions personnalisées" style="width:100%;height:auto;display:block;cursor:zoom-in"><span style="font:500 12px/1 'IBM Plex Mono',monospace;color:#6b655a">LO-FI</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><img src="assets/aidea-missions-hifi.png" alt="Maquette hi-fi : liste des missions personnalisées" style="width:100%;height:auto;display:block;cursor:zoom-in"><span style="font:500 12px/1 'IBM Plex Mono',monospace;color:#B25A3C">HI-FI</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="display:flex;flex-direction:column;gap:6px"><img src="assets/aidea-fiche-lofi.png" alt="Wireframe lo-fi : fiche mission" style="width:100%;height:auto;display:block;cursor:zoom-in"><span style="font:500 12px/1 'IBM Plex Mono',monospace;color:#6b655a">LO-FI</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px"><img src="assets/aidea-fiche-hifi-v2.png" alt="Maquette hi-fi : fiche mission" style="width:100%;height:auto;display:block;cursor:zoom-in"><span style="font:500 12px/1 'IBM Plex Mono',monospace;color:#B25A3C">HI-FI</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:28px">
+      <h3 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#8C3F26">Design system</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px">
+        <div style="display:flex;flex-direction:column;gap:18px;padding:24px;border:1px solid #EADFD7;border-radius:16px;min-width:0">
+          <strong style="font:600 16px/1.3 'Prompt',sans-serif;color:#413d35">Couleurs</strong>
+          <div style="display:flex;flex-direction:column;gap:18px">
+            <div style="display:flex;flex-direction:column;gap:10px"><span style="font:500 12px/1.2 'IBM Plex Sans',sans-serif;color:#413d35">Design</span><div style="display:flex;flex-wrap:wrap;gap:16px"><div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px"><div style="width:48px;height:48px;border-radius:50%;background:#C0694B;border:1px solid #3B2D27"></div><span style="font:500 11px/1.2 'IBM Plex Mono',monospace;color:#6b655a">#C0694B</span></div><div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px"><div style="width:48px;height:48px;border-radius:50%;background:#F2D2C2;border:1px solid #3B2D27"></div><span style="font:500 11px/1.2 'IBM Plex Mono',monospace;color:#6b655a">#F2D2C2</span></div><div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px"><div style="width:48px;height:48px;border-radius:50%;background:#FDF7F1;border:1px solid #3B2D27"></div><span style="font:500 11px/1.2 'IBM Plex Mono',monospace;color:#6b655a">#FDF7F1</span></div></div></div>
+            <div style="display:flex;flex-direction:column;gap:10px"><span style="font:500 12px/1.2 'IBM Plex Sans',sans-serif;color:#413d35">Textes</span><div style="display:flex;flex-wrap:wrap;gap:16px"><div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px"><div style="width:48px;height:48px;border-radius:50%;background:#000000;border:1px solid #3B2D27"></div><span style="font:500 11px/1.2 'IBM Plex Mono',monospace;color:#6b655a">#000000</span></div><div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px"><div style="width:48px;height:48px;border-radius:50%;background:#3B2D27;border:1px solid #3B2D27"></div><span style="font:500 11px/1.2 'IBM Plex Mono',monospace;color:#6b655a">#3B2D27</span></div></div></div>
+            <div style="display:flex;flex-direction:column;gap:10px"><span style="font:500 12px/1.2 'IBM Plex Sans',sans-serif;color:#413d35">Additionnelles</span><div style="display:flex;flex-wrap:wrap;gap:16px"><div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px"><div style="width:48px;height:48px;border-radius:50%;background:#FFFCF8;border:1px solid #3B2D27"></div><span style="font:500 11px/1.2 'IBM Plex Mono',monospace;color:#6b655a">#FFFCF8</span></div><div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px"><div style="width:48px;height:48px;border-radius:50%;background:#DCE6CF;border:1px solid #3B2D27"></div><span style="font:500 11px/1.2 'IBM Plex Mono',monospace;color:#6b655a">#DCE6CF</span></div></div></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px;padding:24px;border:1px solid #EADFD7;border-radius:16px;min-width:0">
+          <strong style="font:600 16px/1.3 'Prompt',sans-serif;color:#413d35">Typographie</strong>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;flex-direction:column;gap:4px;padding-bottom:10px;border-bottom:1px solid #F1E8E1"><span style="font:400 24px/1.2 'Prompt',sans-serif;color:#3B2D27">Titre H1</span><span style="font:500 11px/1.3 'IBM Plex Mono',monospace;color:#6b655a">H1 · Prompt Regular · 24px</span></div>
+            <div style="display:flex;flex-direction:column;gap:4px;padding-bottom:10px;border-bottom:1px solid #F1E8E1"><span style="font:500 20px/1.2 'Commissioner',sans-serif;color:#3B2D27">Titre H2</span><span style="font:500 11px/1.3 'IBM Plex Mono',monospace;color:#6b655a">H2 · Commissioner Medium · 20px</span></div>
+            <div style="display:flex;flex-direction:column;gap:4px;padding-bottom:10px;border-bottom:1px solid #F1E8E1"><span style="font:400 16px/1.4 'Commissioner',sans-serif;color:#3B2D27">Texte courant</span><span style="font:500 11px/1.3 'IBM Plex Mono',monospace;color:#6b655a">Body · Commissioner Regular · 16px</span></div>
+            <div style="display:flex;flex-direction:column;gap:4px;padding-bottom:10px;border-bottom:1px solid #F1E8E1"><span style="font:400 16px/16px 'Commissioner',sans-serif;color:#3B2D27">Sous-texte</span><span style="font:500 11px/1.3 'IBM Plex Mono',monospace;color:#6b655a">Sous-texte · Commissioner Regular · 16px / LH 16</span></div>
+            <div style="display:flex;flex-direction:column;gap:4px;padding-bottom:10px;border-bottom:1px solid #F1E8E1"><span style="font:400 12px/1.3 'Commissioner',sans-serif;color:#3B2D27">Petit texte</span><span style="font:500 11px/1.3 'IBM Plex Mono',monospace;color:#6b655a">Petit texte · Commissioner Regular · 12px</span></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px;padding:24px;border:1px solid #EADFD7;border-radius:16px;min-width:0">
+          <strong style="font:600 16px/1.3 'Prompt',sans-serif;color:#413d35">Logo</strong>
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;min-height:160px;border-radius:12px;background:#FDF7F1;padding:24px">
+            <img src="assets/aidea-ds-logo.png" alt="Logo Aidéa" data-no-zoom="" style="width:93px;height:auto;display:block">
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <p style="margin:0;color:#413d35;text-align:justify;hyphens:manual;">Le design system a été organisé par sections (couleurs, typographie, composants) afin de garder une base claire et facile à maintenir. Il a évolué tout au long du projet.<br></p>
+        <a href="https://www.figma.com/design/YrpzjVaMO8Hb8DlPDDHZIV/Design-System?node-id=0-1&amp;t=Ljlz2FTbFYnCNVHa-1" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:12px 20px;border-radius:999px;background:#B25A3C;color:#FFF8F2;font:500 14px/1 'IBM Plex Sans',sans-serif;text-decoration:none;white-space:nowrap" style-hover="background:#8C3F26">Voir le design system sur Figma →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPITRE 8 — Réflexion (terracotta) -->
+  <div id="reflexion" lang="fr" style="background:#B25A3C;color:#FFF8F2">
+    <div style="box-sizing:border-box;max-width:1600px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(24px,8vw,160px);display:flex;flex-direction:column;gap:8px">
+      <span style="font:500 22px/1.2 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#FFE3D6">Chapitre 8</span>
+      <h2 style="margin:0;font:600 18px/1.3 'Prompt',sans-serif;color:#FFF8F2">Réflexion après coup</h2>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px">
+        <p style="margin:0;color:#FFF8F2;text-align:justify;hyphens:manual">Cette étude de cas fictive a permis de concevoir une première version complète de la plateforme, depuis l’analyse des besoins utilisateurs jusqu’à la réalisation d’une maquette haute fidélité interactive.</p>
+        <p style="margin:0;color:#FFF8F2;text-align:justify;hyphens:manual">Les recherches menées, l’analyse des données, les personas, le benchmark et les user flows ont permis de définir les principaux besoins et fonctionnalités de l’expérience. Ces enseignements ont ensuite guidé la conception des wireframes, du Design System et de l’interface finale.</p>
+        <p style="margin:0;color:#FFF8F2;text-align:justify;hyphens:manual">Les données utilisées dans cette étude sont entièrement fictives et ont été générées à des fins de démonstration méthodologique. Elles ne proviennent pas d’un panel de répondants réels. Les profils et réponses ont été construits afin de représenter différents besoins et situations plausibles, et d’explorer la manière dont la data peut orienter les décisions UX.</p>
+        <p style="margin:0;color:#FFF8F2;text-align:justify;hyphens:manual">Le projet s’arrête volontairement à la réalisation du prototype haute fidélité. Les tests utilisateurs et les phases d’itération n’ont pas été intégrés au périmètre de cette étude de cas. Ils constitueraient une étape suivante permettant de confronter les choix de conception à des utilisateurs réels, d’identifier d’éventuels points de friction et de faire évoluer la solution.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="box-sizing:border-box;max-width:1600px;margin:0 auto;padding:40px clamp(24px,8vw,160px);display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font:500 13px/1 'IBM Plex Sans',sans-serif">
+    <a href="Projet Eparneo.dc.html" style="margin-left:auto">Projet suivant : Eparneo →</a>
+  </div>
+
+  <div style="background:#1f1e1a;color:#e7e3d8;margin-top:24px">
+    <div style="box-sizing:border-box;max-width:1600px;margin:0 auto;padding:56px clamp(24px,8vw,160px) 28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:340px">
+        <span style="font:400 30px/1 'Instrument Serif',serif;color:#f7f4ec">Emma Thelineau</span>
+        <p style="margin:0;color:#a9a394;font-size:14px;text-align:justify;hyphens:manual">Ouverte aux opportunités en région parisienne comme à distance.</p>
+      </div>
+      <div style="display:flex;gap:56px;flex-wrap:wrap;font:500 13px/1 'IBM Plex Sans',sans-serif">
+        <div style="display:flex;flex-direction:column;gap:10px"><span>Navigation</span><a href="Home.dc.html" style="color:#fff">Accueil</a><a href="Contact.dc.html" style="color:#fff">Contact</a></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><span>Liens</span><a href="https://www.linkedin.com/in/emma-thelineau-148a9a197/" target="_blank" rel="noopener" style="color:#fff">LinkedIn</a><a href="assets/CV_product_designer_Emma-Thelineau.pdf" target="_blank" rel="noopener" style="color:#fff">CV (PDF)</a></div>
+      </div>
+    </div>
+    <div style="box-sizing:border-box;max-width:1600px;margin:0 auto;padding:20px clamp(24px,8vw,160px) 32px;border-top:1px solid rgba(247,244,236,.12);font:500 12px/1 'IBM Plex Sans',sans-serif;color:#7a7466">© 2026 Emma Thelineau</div>
+  </div>
+
+  <sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ lbClose }}" role="dialog" aria-modal="true" style="position:fixed;inset:0;z-index:1000;background:rgba(24,20,16,.9);display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,56px);box-sizing:border-box;cursor:zoom-out">
+      {{ lbImg }}
+      <button onClick="{{ lbClose }}" aria-label="Fermer" style="position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:none;background:#FFF8F2;color:#1f1e1a;font:400 24px/1 'IBM Plex Sans',sans-serif;cursor:pointer" style-hover="background:#F6E6DE">×</button>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  tocIds = ["questionnaire","matrice","insights","fonctionnalites","benchmark","lofi","hifi","reflexion"];
+  tocS = ["Questionnaire","Insights","Personas","Fonctionnalités","Benchmark","Lo-fi","Hi-fi","Réflexion"];
+  tocRow = React.createRef();
+  navBottom() { const nav = document.querySelector('[data-toc-nav]'); return nav ? nav.getBoundingClientRect().bottom : 0; }
+  tocGo(i, e) {
+    if (e) e.preventDefault();
+    const el = document.getElementById(this.tocIds[i]); if (!el) return;
+    this.tocLock = i; clearTimeout(this.tocLockT);
+    this.setState({ tA: i }, () => this.tocSync());
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - this.navBottom() - 12, behavior: 'smooth' });
+    this.tocLockT = setTimeout(() => { this.tocLock = null; this.tocScroll(); }, 1200);
+  }
+  tocScroll = () => {
+    if (this.tocRaf) return;
+    this.tocRaf = requestAnimationFrame(() => {
+      this.tocRaf = null;
+      if (this.tocLock != null) { clearTimeout(this.tocLockT); this.tocLockT = setTimeout(() => { this.tocLock = null; this.tocScroll(); }, 150); const max0 = document.documentElement.scrollHeight - window.innerHeight; const p0 = max0 > 0 ? Math.min(1, Math.max(0, window.scrollY / max0)) : 0; this.setState({ tP: p0 }); return; }
+      const st = this.state || {};
+      const off = this.navBottom() + 40; let a = -1;
+      this.tocIds.forEach((id, i) => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top <= off) a = i; });
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      if (max > 0 && window.scrollY >= max - 4) a = this.tocIds.length - 1;
+      if (a !== st.tA || Math.abs(p - (st.tP || 0)) > 0.003) this.setState({ tA: a, tP: p }, () => this.tocSync());
+    });
+  };
+  tocInit() { window.addEventListener('scroll', this.tocScroll, { passive: true }); window.addEventListener('resize', this.tocScroll); this.tocScroll(); }
+  tocCleanup() { window.removeEventListener('scroll', this.tocScroll); window.removeEventListener('resize', this.tocScroll); }
+  tocSync() {
+    const a = (this.state || {}).tA;
+    if (this._lastA === a) return;
+    this._lastA = a;
+    const row = this.tocRow.current; if (!row) return;
+    const chip = row.querySelectorAll('a')[a];
+    if (chip) row.scrollTo({ left: chip.offsetLeft - row.clientWidth / 2 + chip.offsetWidth / 2, behavior: 'smooth' });
+  }
+  tocVals() {
+    const st = this.state || {}; const a = st.tA ?? -1, p = st.tP || 0;
+    return {
+      tocRow: this.tocRow,
+      tocItems: this.tocS.map((s, i) => {
+        const on = i === a, done = i < a;
+        return { n: String(i + 1).padStart(2, '0'), s, go: (e) => this.tocGo(i, e),
+          chip: { flex: 'none', padding: '7px 12px', borderRadius: '999px', font: "500 13px/1 'IBM Plex Sans',sans-serif", letterSpacing: '0', textDecoration: 'none', background: on ? '#B25A3C' : 'transparent', color: on ? '#FFF8F2' : done ? '#9a9387' : '#413d35', border: '1px solid ' + (on ? '#B25A3C' : '#EADDD5'), transition: 'background .2s, color .2s' } };
+      }),
+      tocProg: { position: 'absolute', left: 0, bottom: '-1px', height: '3px', width: (p * 100).toFixed(1) + '%', background: '#B25A3C', transition: 'width .15s linear' },
+    };
+  }
+
+  state = { p: 0, lb: null };
+  zoomable(el) {
+    const img = el && el.closest && el.closest('img');
+    if (!img || img.closest('header, nav, a, button, [role="dialog"], [data-no-zoom]')) return null;
+    return img;
+  }
+  onDocClick = (e) => {
+    const img = this.zoomable(e.target);
+    if (!img) return;
+    e.preventDefault();
+    this.setState({ lb: { src: img.currentSrc || img.src, alt: img.alt || '', w: img.naturalWidth } });
+  };
+  onKey = (e) => { if (e.key === 'Escape' && this.state.lb) this.setState({ lb: null }); };
+  componentWillUnmount() {
+    this.tocCleanup();
+    clearInterval(this.videoTimer);
+    document.removeEventListener('click', this.onDocClick);
+    document.removeEventListener('keydown', this.onKey);
+  }
+  renderVals() {
+    const n = 3, p = this.state.p;
+    const go = (i) => this.setState({ p: (i + n) % n });
+    const dot = (i) => ({ width: i === p ? '28px' : '10px', height: '10px', borderRadius: '5px', border: 'none', padding: 0, cursor: 'pointer', background: i === p ? '#B25A3C' : '#E6C9BC', transition: 'all .3s' });
+    return {
+      ...this.tocVals(),
+      pTrack: { display: 'flex', width: '100%', transform: `translateX(-${p * 100}%)`, transition: 'transform .5s cubic-bezier(.2,.7,.2,1)' },
+      pPrev: () => go(p - 1), pNext: () => go(p + 1),
+      pGo0: () => go(0), pGo1: () => go(1), pGo2: () => go(2),
+      pDot0: dot(0), pDot1: dot(1), pDot2: dot(2),
+      pLabel: ['Léa, 26 ans', 'Thomas, 32 ans', 'Sophie, 68 ans'][p],
+      lbOpen: !!this.state.lb, lbSrc: this.state.lb?.src, lbAlt: this.state.lb?.alt,
+      lbImg: this.state.lb ? React.createElement('img', { src: this.state.lb.src, alt: this.state.lb.alt, style: { display: 'block', width: '100%', height: '100%', objectFit: 'contain', borderRadius: '8px' } }) : null,
+      lbImgStyle: { display: 'block', width: '100%', height: '100%', objectFit: 'contain', borderRadius: '8px' },
+      lbClose: (e) => { e.stopPropagation(); this.setState({ lb: null }); },
+    };
+  }
+  bindVideos() {
+    document.querySelectorAll('video[data-loop-video]').forEach((v) => {
+      if (!v.__bound) {
+        v.__bound = true;
+        v.muted = true; v.loop = true; v.playsInline = true;
+        v.addEventListener('ended', () => { v.currentTime = 0; v.play().catch(() => {}); });
+        if (v.hasAttribute('data-start-on-view')) {
+          v.removeAttribute('autoplay'); v.pause(); v.currentTime = 0;
+          const vio = new IntersectionObserver((es) => {
+            es.forEach((e) => {
+              if (e.isIntersecting && !v.__seen) { v.__seen = true; v.currentTime = 0; v.play().catch(() => {}); vio.disconnect(); }
+            });
+          }, { threshold: 0.4 });
+          vio.observe(v.parentElement || v);
+        }
+        v.addEventListener('canplay', () => { if (!v.hasAttribute('data-start-on-view') || v.__seen) v.play().catch(() => {}); });
+        v.addEventListener('timeupdate', () => {
+          if (v.duration && v.currentTime >= v.duration - 0.3) this.restart(v);
+        });
+      }
+      if (v.duration && v.currentTime >= v.duration - 0.05) this.restart(v);
+      const rate = parseFloat(v.dataset.rate || '1');
+      if (v.playbackRate !== rate) { v.defaultPlaybackRate = rate; v.playbackRate = rate; }
+      if (v.hasAttribute('data-start-on-view') && !v.__seen) { if (!v.paused) v.pause(); return; }
+      if (v.paused && v.readyState >= 2) v.play().catch(() => {});
+    });
+  }
+  restart(v) {
+    if (v.__restarting) return;
+    v.__restarting = true;
+    v.currentTime = 0;
+    v.play().catch(() => {});
+    setTimeout(() => {
+      if (v.currentTime >= v.duration - 0.3) { v.load(); v.play().catch(() => {}); }
+      v.__restarting = false;
+    }, 400);
+  }
+  componentDidUpdate() { this.bindVideos(); }
+  componentDidMount() {
+    this.tocInit();
+    document.documentElement.lang = 'fr';
+    document.addEventListener('click', this.onDocClick);
+    document.addEventListener('keydown', this.onKey);
+    setTimeout(() => document.querySelectorAll('img').forEach((i) => { if (this.zoomable(i)) i.style.cursor = 'zoom-in'; }), 300);
+    this.bindVideos();
+    this.videoTimer = setInterval(() => this.bindVideos(), 1000);
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          e.target.style.filter = 'blur(0)';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px 15% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+  }
+}
+</script>
+</body>
+</html>
